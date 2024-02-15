@@ -1,3 +1,6 @@
 [
-    "physics20.json"
+    {
+        "key": "physics20", 
+        "name": "Physics 20"
+    }
 ]

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html class="high-contrast">
+    <head>
+        <!-- Bootstrap & Custom Stylesheets -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="reset-styles.css">
+        <link rel="stylesheet" href="starter-styles.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Course name</h1>
+        <div id = "root">
+
+        </div>
+        <!-- Logic -->
+        <script type="module">
+            import HomepageLoader from "./classes/HomepageLoader.js";
+
+            let loader = new HomepageLoader(document.getElementById("root"));
+            loader.load();
+        </script>
+        
+        <!-- My FontAwesome kit -->
+        <script src="https://kit.fontawesome.com/e44e5ab538.js" crossorigin="anonymous"></script>
+    </body>
+</html>
