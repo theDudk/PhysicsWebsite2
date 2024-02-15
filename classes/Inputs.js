@@ -1,16 +1,16 @@
-import {stringToHTML} from "./classes/Custom.js";
-import Answer from "./classes/Answer.js";
+import {stringToHTML} from "./Custom.js";
+import Answer from "./Answer.js";
 
 /**
  * @param { object } inputJson - structure of the input
  */
-const getInput = (inputJson) => {
+function getInput(inputJson){
     switch(inputJson.type) {
         case "num":
-            return new NumberInput(inputJson);
+            return new NumInput(inputJson);
             break;
         case "sigdig":
-            return new NumberInput(inputJson);
+            return new NumInput(inputJson);
             break;
     }
 
@@ -25,7 +25,7 @@ const getInput = (inputJson) => {
 // public checkAnswer(string value)
 // public toString()
 
-class NumberInput{
+class NumInput{
     inputJson;
     /**
      * @param { object } inputJson - structure for the input
@@ -80,4 +80,4 @@ class NumberInput{
     }
 }
 
-export default getInput;
+export {getInput, NumInput};

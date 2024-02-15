@@ -1,4 +1,4 @@
-import getInput from "./classes/Inputs.js"
+import {getInput, NumInput} from "./Inputs.js";
 
 class Answer{
     #inputs = [];
