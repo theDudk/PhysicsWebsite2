@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html class="high-contrast">
+    <head>
+        <!-- Bootstrap & Custom Stylesheets -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="reset-styles.css">
+        <link rel="stylesheet" href="starter-styles.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <button><i class="fa-solid fa-rocket"></i></button>
+            <span><a id="course-link" href="javascript:void()">Course Name</a></span>
+        </header>
+
+        <h1>Unit name</h1>
+
+        <div class="card">
+            <div>
+                <h1>Questions</h1>
+            </div>
+            <div id="quesitons" class="grid"></div>
+        </div>
+        <div class="card">
+            <div>
+                <h1>Flashcards</h1>
+            </div>
+            <div id="flashcards" class="grid"></div>
+        </div>
+
+        <!-- Logic -->
+        <script type="module">
+            import UnitLoader from "./classes/UnitLoader.js";
+
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.get("c") == null || urlParams.get("u") == null) window.location.href = "index.html";
+
+            let loader = new UnitLoader(document.getElementById("quesitons"), document.getElementById("flashcards"));
+            loader.load(urlParams.get("c"), parseInt(urlParams.get("u")));
+        </script>
+            
+        <!-- My FontAwesome kit -->
+        <script src="https://kit.fontawesome.com/e44e5ab538.js" crossorigin="anonymous"></script>
+    </body>
+</html>

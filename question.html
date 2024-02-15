@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="high-contrast">
+    <head>
+        <!-- Bootstrap & Custom Stylesheets -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="reset-styles.css">
+        <link rel="stylesheet" href="starter-styles.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- https://lucid.app/lucidchart/1aa1a103-5fc0-4d86-ad0c-4e7dfd952e56/edit?beaconFlowId=58DA90A1CDC39FD9&invitationId=inv_fe54f89a-e9f6-4ad9-807e-155b689d0559&page=0_0# -->
+        <header>
+            <button><i class="fa-solid fa-rocket"></i></button>
+            <span><a id="course-link" href="javascript:void()">Loading</a> - <a id="unit-link" href="javascript:void()">Loading</a></span>
+        </header>
+
+        <div class="container">
+            <p id="question-src">Loading Question Source...</p>
+            <h1 id="question-title">Loading Question...</h1>
+            <p id="question-desc">Loading question description...</p>
+            <div class="card">
+                <div class="row">
+                    <h1>Answers</h1>
+                    <button>Solutions</button>
+                </div>
+                <div id="input-field" class="column">
+                    
+                </div>
+                <div>
+                    <button id="confirm-btn" class="disabled">Confirm</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="background-color: lightblue;">
+            <div class="container">
+                <h1>Contribute</h1>
+                <p>Found an issue? Contribute to the project by submitting any fixes to the <a href="javascript:void">form</a>.</p>
+                <h2>Common issues:</h2>
+                <ul>
+                    <li><a href="javascript:void">Submit a change to the question?</a></li>
+                    <li><a href="javascript:void">Submit a change to the solution?</a></li>
+                    <li><a href="javascript:void">Submit a change to the answers?</a></li>
+                    <li><a href="javascript:void">Submit a change to the concepts?</a></li>
+                    <li><a href="javascript:void">Found a bug?</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Overlays -->
+        <div id="success" class="bottom-box hidden">
+            <div>                
+                <h1>Success!</h1>
+                <p class="oneline">Answers: 1, 120, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123,</p>
+            </div>
+            <div class="bottom-box-min">
+                <button id="success-next">Next</button>
+                <input id="success-next-input" type="tel" placeholder="#" maxlength="2">
+            </div>
+        </div>
+        <div id="failure" class="bottom-box hidden">
+            <div>                
+                <h1>Failure!</h1>
+                <button>Solutions</button>
+            </div>
+            <div class="bottom-box-min">
+                <button id="failure-try-again">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Modules -->
+        <script type="module">
+            import QuestionLoader from '/classes/QuestionLoader.js';
+
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.get("c") == null || urlParams.get("u") == null || urlParams.get("q") == null) window.location.href = "index.html";
+
+            let qLoader = new QuestionLoader(document.getElementById("confirm-btn")).load(urlParams.get("c"), parseInt(urlParams.get("u")), parseInt(urlParams.get("q")), document.getElementById("input-field"));
+        </script>
+    
+        <!-- My FontAwesome kit -->
+        <script src="https://kit.fontawesome.com/e44e5ab538.js" crossorigin="anonymous"></script>
+    </body>
+</html>

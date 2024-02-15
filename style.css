@@ -1,0 +1,158 @@
+:root{
+    font-size: 1.5em;
+
+    --border: 0.2em;
+}
+
+/* Website parts */
+header{
+    position: sticky;
+    top:0;
+    display: flex;
+    justify-content: space-between;
+
+    background-color: white;
+    padding: 1em;
+    border-bottom: var(--border) solid black;
+    z-index: 100;
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    padding: 1em;
+    margin: auto;
+}
+/* Text parts */
+h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+h2{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.oneline {
+    width: 100%;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+/* Random */
+.hidden{
+    display: none!important;
+}
+.top-right{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+.small{
+    font-size: 0.7em;
+}
+/* Buttons */
+button.disabled{
+    background-color: grey;
+}
+button{
+    background-color: green;
+}
+/* Inputs */
+.input-div {
+    position: relative;
+}
+input{
+    border: var(--border) solid black;
+}
+.input-div > .check {
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    background: radial-gradient(circle, green 0%, green 70%, transparent 71%);
+}
+.input-div:not(:has(.check.hidden)) > input {
+    padding-right: 2.5em;
+}
+/* Cards */
+.card{
+    border: var(--border) solid black;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+}
+/* grids */
+.grid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+@media (max-width: 850px) {
+    .grid{
+        grid-template-columns: 50% 50%;
+    }
+}
+.grid > div{
+    overflow: hidden;
+}
+.word-card{
+    padding: 1em;
+}
+/* badges */
+.badge-list {
+    display: flex;
+    gap: 0.1em;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.badge-list > button {
+    display: inline-block;
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+/* List */
+.list {
+    width: 100%;
+}
+.list > *{
+    text-align: left;
+    width: 100%;
+}
+/* Boxes */
+.bottom-box{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 1em;
+    border: var(--border) solid black;
+    background-color: white;
+    z-index: 100;
+
+    display: flex;
+}
+
+.bottom-box > div:not(.bottom-box-min){
+    flex: 1;
+    overflow: hidden;
+}
+.bottom-box > .bottom-box-min{
+    width: fit-content;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.bottom-box input{
+    height: 1.5ch;
+    width: 3em;
+    text-align: right;
+    padding-right: 0.1em;
+}
