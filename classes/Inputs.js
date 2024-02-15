@@ -1,5 +1,5 @@
-import {stringToHTML} from "/classes/Custom.js";
-import Answer from "/classes/Answer.js";
+import {stringToHTML} from "./classes/Custom.js";
+import Answer from "./classes/Answer.js";
 
 /**
  * @param { object } inputJson - structure of the input
