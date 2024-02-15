@@ -28,6 +28,9 @@ class QuestionLoader {
      * @param {Node} root - node where the question is to be loaded
      */
     loadQuestion(courseJson, unitIdx, questionIdx, root) {
+        console.log(nextQuestion(courseJson, unitIdx, questionIdx, 1)); // delete later
+        console.log(nextQuestion(courseJson, unitIdx, questionIdx, 2)); // delete later
+
         // store the question information 
         this.courseJson = courseJson;
         this.unitIdx = unitIdx;

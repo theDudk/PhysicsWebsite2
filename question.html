@@ -75,9 +75,14 @@
             </div>
         </div>
 
-        <!-- Modules -->
+        <!-- Logic -->
         <script type="module">
-            import QuestionLoader from '/classes/QuestionLoader.js';
+            import QuestionLoader from './classes/QuestionLoader.js';
+            import {nextQuestion} from "./classes/Custom.js";
+
+            localStorage.setItem("physics20/0/0", "true");
+            localStorage.setItem("physics20/0/1", "true");
+            localStorage.setItem("physics20/1/0", "true");
 
             const urlParams = new URLSearchParams(window.location.search);
             if(urlParams.get("c") == null || urlParams.get("u") == null || urlParams.get("q") == null) window.location.href = "index.html";

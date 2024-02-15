@@ -6,7 +6,47 @@
             "name": "Average Speed",
             "questions": [
                 {
-                    "name": "Example 1",
+                    "name": "0 1",
+                    "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "files": [
+                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                    ],
+                    "solution": "Here is where the solution would go. IDK what to say so I'm a placeholder text and thats perfectly normal.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answer": 1,
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "answer": 120
+                        }
+                    ]
+                },
+                {
+                    "name": "0 2",
+                    "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "files": [
+                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                    ],
+                    "solution": "Here is where the solution would go. IDK what to say so I'm a placeholder text and thats perfectly normal.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answer": 1,
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "answer": 120
+                        }
+                    ]
+                },
+                {
+                    "name": "0 3",
                     "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
                     "files": [
                         "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
@@ -25,6 +65,72 @@
                         }
                     ]
                 }
+            ]
+        },
+        {
+            "name": "Average Speed",
+            "questions": [
+                {
+                    "name": "1 1",
+                    "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "files": [
+                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                    ],
+                    "solution": "Here is where the solution would go. IDK what to say so I'm a placeholder text and thats perfectly normal.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answer": 1,
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "answer": 120
+                        }
+                    ]
+                },
+                {
+                    "name": "1 2",
+                    "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "files": [
+                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                    ],
+                    "solution": "Here is where the solution would go. IDK what to say so I'm a placeholder text and thats perfectly normal.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answer": 1,
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "answer": 120
+                        }
+                    ]
+                },
+                {
+                    "name": "1 3",
+                    "text": "Here is where the question would go... Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "files": [
+                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                    ],
+                    "solution": "Here is where the solution would go. IDK what to say so I'm a placeholder text and thats perfectly normal.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answer": 1,
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "answer": 120
+                        }
+                    ]
+                }
+                
             ]
         }
     ],
