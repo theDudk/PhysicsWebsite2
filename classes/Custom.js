@@ -27,34 +27,31 @@ function getCourseSrc(courseKey) {
  * @param { int } amt - number of questions to skip (not including completed questions)
  */
 function nextQuestion(courseJson, unitIdx, questionIdx, amt) {
-    return amt;
+    let amtLeft = amt;
+
+    let currUnit = unitIdx;
+    let currQuestion = questionIdx;
+    while(true) {
+        console.log(currUnit+ ", " + currQuestion + ", " + amtLeft)
+        currQuestion++;
+        if(courseJson.units[currUnit].questions[currQuestion] == null) {
+            currUnit++;
+            currQuestion = 0;
+        }
+
+        if(courseJson.units[currUnit] == null) {
+            return getCourseSrc(courseJson.key);
+        }
+
+        if(localStorage.getItem(courseJson.key + "/" + currUnit + "/" + currQuestion) == null) {
+            amtLeft--;
+        }
+
+        if(amtLeft == 0) {
+            return getQuestionSrc(courseJson.key, currUnit, currQuestion);
+        }
+    }
 }
-
-// This code is AWFUL, but if you need it as a reference
-//function nextQuestion(courseJson, unitIdx, questionIdx, amt) {
-//     const questionsTillUnitEnd = courseJson.units[unitIdx].questions.length - 1 - questionIdx;
-//     if(questionsTillUnitEnd - amt < 0) {
-//         const questionQuota = amt - questionsTillUnitEnd;
-
-//         let idx = 1;
-//         while(true) {
-//             const currUnit = courseJson.units[unitIdx + idx];
-//             if(currUnit == null) {
-//                 return getCourseSrc(courseJson.key);
-//             }
-
-//             if(currUnit.questions.length - questionQuota >= 0) {
-//                 break;
-//             }
-//             questionQuota -= currUnit.questions.length;
-
-//             idx++;
-//         }
-//         console.log(questionQuota)
-//         return getQuestionSrc(courseJson.key, unitIdx + idx, questionQuota - 1);
-//     }
-//     return getQuestionSrc(courseJson.key, unitIdx, questionIdx + amt);
-// }
 
 // credit: https://pandaquests.medium.com/5-easy-ways-to-check-if-a-string-contains-only-numbers-in-javascript-305db38625e8
 const onlyContainsNumbers = (str) => /^\d+$/.test(str);

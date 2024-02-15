@@ -91,7 +91,6 @@ class QuestionLoader {
         document.getElementById("success-next").addEventListener("click", function() {
             const val = nextInput.value;
             const amt = (val != null && onlyContainsNumbers(val) && parseInt(val) > 0) ? val : 1;
-            console.log(nextQuestion(courseJson, unitIdx, questionIdx, amt));
             window.location.href = nextQuestion(courseJson, unitIdx, questionIdx, amt);
         });
 
