@@ -17,7 +17,7 @@
     <body>
         <!-- https://lucid.app/lucidchart/1aa1a103-5fc0-4d86-ad0c-4e7dfd952e56/edit?beaconFlowId=58DA90A1CDC39FD9&invitationId=inv_fe54f89a-e9f6-4ad9-807e-155b689d0559&page=0_0# -->
         <header>
-            <button><i class="fa-solid fa-rocket"></i></button>
+            <button onclick="window.location.href='index.html'"><i class="fa-solid fa-rocket fa-xl"></i></button>
             <span><a id="course-link" href="javascript:void()">Loading</a> - <a id="unit-link" href="javascript:void()">Loading</a></span>
         </header>
 
@@ -28,7 +28,7 @@
             <div class="card">
                 <div class="row">
                     <h1>Answers</h1>
-                    <button>Solutions</button>
+                    <button class="e-solution-reveal">Solutions</button>
                 </div>
                 <div id="input-field" class="column">
                     
@@ -68,16 +68,24 @@
         <div id="failure" class="bottom-box hidden">
             <div>                
                 <h1>Failure!</h1>
-                <button>Solutions</button>
+                <button class="e-solution-reveal">Solutions</button>
             </div>
             <div class="bottom-box-min">
                 <button id="failure-try-again">Try Again</button>
             </div>
         </div>
 
+        <div id="solution" class="right-box hidden">
+            <button id="solution-close">close</button>
+            <h1>Solutions</h1>
+
+            <div id="solution-text">This is where the solution would go</div>
+        </div>
+
         <!-- Logic -->
         <script type="module">
             import QuestionLoader from './classes/QuestionLoader.js';
+            import FancyStringLoader from './classes/FancyStringLoader.js';
 
             const urlParams = new URLSearchParams(window.location.search);
             if(urlParams.get("c") == null || urlParams.get("u") == null || urlParams.get("q") == null) window.location.href = "index.html";

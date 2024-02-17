@@ -4,13 +4,13 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.25em;
-  left: 0.25em;
+  bottom: 0.2em;
+  left: 0em;
 }
 
 sup {
-  top: -0.5em;
-  left: 0.25em;
+  top: 0em;
+  left: 0;
 }
 
 pre, code {

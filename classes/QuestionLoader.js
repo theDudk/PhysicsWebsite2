@@ -1,5 +1,6 @@
 import Answer from "./Answer.js";
 import {getCourseSrc, getUnitSrc, nextQuestion, onlyContainsNumbers} from "./Custom.js";
+import FancyStringLoader from "./FancyStringLoader.js";
 
 class QuestionLoader {
     /**
@@ -46,7 +47,7 @@ class QuestionLoader {
 
         document.getElementById("question-src").textContent = courseJson.name + " - " + courseJson.units[unitIdx].name;
         document.getElementById("question-title").textContent = questionJson.name;
-        document.getElementById("question-desc").textContent = questionJson.text;
+        FancyStringLoader.addHTML(document.getElementById("question-desc"), questionJson.text);
 
         // Load Inputs
         this.answerObj = new Answer(this.confirmBtn);
@@ -55,6 +56,13 @@ class QuestionLoader {
             this.answerObj.addInput(i);
         }
         this.answerObj.setRoot(root);
+
+        // Load Solutions
+        if(questionJson.solution != null) {
+            FancyStringLoader.addHTML(document.getElementById("solution-text"), questionJson.solution);
+        } else {
+            FancyStringLoader.addHTML(document.getElementById("solution-text"), "Whoops! There doesn't seem to be a solution for this question. <a=index.html=contribute by submitting your own>!");
+        }
 
         this.loadEventListeners();
     }
@@ -91,6 +99,17 @@ class QuestionLoader {
             window.location.href = nextQuestion(courseJson, unitIdx, questionIdx, amt);
         });
 
+        // Solutions window
+        const solutionsWindow = document.getElementById("solution")
+        for(let i of document.querySelectorAll(".e-solution-reveal")) {
+            i.addEventListener("click", () => {
+                solutionsWindow.classList.remove("hidden");
+            })
+        }
+
+        document.getElementById("solution-close").addEventListener("click", () =>{
+            solutionsWindow.classList.add("hidden");
+        }) 
     }
 }
 

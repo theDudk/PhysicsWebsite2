@@ -156,3 +156,15 @@ input{
     text-align: right;
     padding-right: 0.1em;
 }
+/* right-box */
+.right-box{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 700px;
+    border-left: var(--border) solid black;
+    background-color: white;
+    z-index: 101;
+}
