@@ -79,6 +79,24 @@ input{
     display: flex;
     flex-direction: column;
 }
+.card-edge{
+    width: fit-content;
+    position: relative;
+    padding-inline: 1em;
+    cursor: pointer;
+}
+.card-edge:first-child{
+    border-right: var(--border) solid black;
+}
+.card-edge:last-child{
+    border-left: var(--border) solid black;
+}
+.card-edge > *{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .row{
     display: flex;
     justify-content: space-between;
@@ -167,4 +185,28 @@ input{
     border-left: var(--border) solid black;
     background-color: white;
     z-index: 101;
+}
+
+/* Flashcards */
+.flashcard{
+    position: relative;
+    height: 20em;
+    cursor: pointer;
+    width: 100%;
+}
+.flashcard > *{
+    cursor: auto;
+}
+.flashcard > div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* fs */
+.fs-img{
+    width: 20em;
+    max-width: 100%;
 }

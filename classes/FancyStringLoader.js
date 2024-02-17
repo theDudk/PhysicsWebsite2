@@ -2,9 +2,7 @@ import { stringToHTML } from "./Custom.js";
 
 class FancyStringLoader{
     constructor() {
-        if (this instanceof StaticClass) {
-            throw Error('A static class cannot be instantiated.');
-        }
+        throw Error('A static class cannot be instantiated.');
     }
 
     static notation = {
@@ -33,7 +31,7 @@ class FancyStringLoader{
             return node;
         },
         img: (src) => {
-            let node = stringToHTML("<img>");
+            let node = stringToHTML("<img class='fs-img'>");
             node.src = src;
 
             return node;
@@ -112,7 +110,6 @@ class FancyStringLoader{
      */
     static #getHTML(str) {
         // -- finds the first node in the string
-        console.log(str)
         let node = {
             start: str.indexOf("<"),
             end: str.indexOf(">"),

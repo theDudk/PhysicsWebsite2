@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="high-contrast">
+    <head>
+        <!-- Bootstrap & Custom Stylesheets -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="reset-styles.css">
+        <link rel="stylesheet" href="starter-styles.css">
+        <link rel="stylesheet" href="style.css">
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <button onclick="window.location.href='index.html'"><i class="fa-solid fa-rocket fa-xl"></i></button>
+            <span><a id="course-link" href="javascript:void()">Loading</a></span>
+        </header>
+
+        <div class="card">
+            <div>
+                <h1>Flashcard (<span id="flashcard-count">?/?</span>)</h1>
+            </div>
+
+            <div class="row card">
+                <div id="flashcard-back" class="card-edge">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="flashcard" id="root"></div>
+                <div id="flashcard-next" class="card-edge">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <select>
+                <option>no sort</option>
+                <option>random</option>
+            </select>
+            <select>
+                <option>front up</option>
+                <option>back up</option>
+                <option>random</option>
+            </select>
+        </div>
+
+        <!-- Logic -->
+        <script type="module">
+            import FlashcardLoader from './classes/FlashcardLoader.js';
+
+            const urlParams = new URLSearchParams(window.location.search);
+            if(urlParams.get("c") == null || urlParams.get("f") == null || urlParams.get("m") == null) window.location.href = "index.html";
+
+            FlashcardLoader.load(urlParams.get("c"), parseInt(urlParams.get("f")), document.getElementById("root"), urlParams.get("m"));
+        </script>
+
+        <!-- My FontAwesome kit -->
+        <script src="https://kit.fontawesome.com/e44e5ab538.js" crossorigin="anonymous"></script>
+    </body>
+</html>
