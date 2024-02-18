@@ -9,6 +9,15 @@ function stringToHTML(string) {
     return temp.children[0];
 }
 
+function selectOption(select, optionValue) {
+    for(let i of select.children) {
+        i.removeAttribute("selected");
+        if(i.value == optionValue) {
+            i.setAttribute("selected", "true");
+        }
+    }
+}
+
 function getQuestionSrc(courseKey, unitIdx, questionIdx) {
     return "question.html?c=" + courseKey + "&u=" + unitIdx + "&q=" + questionIdx;
 }
@@ -18,8 +27,15 @@ function getUnitSrc(courseKey, unitIdx) {
 function getCourseSrc(courseKey) {
     return "course.html?c=" + courseKey;
 }
-function getFlashcardSrc(courseKey, flashcardIdx) {
-    return "flashcards.html?c=" + courseKey + "&f=" + flashcardIdx;
+function getFlashcardSrc(courseKey, flashcardIdx, sortMode, orientation) {
+    let src = "flashcards.html?c=" + courseKey + "&f=" + flashcardIdx;
+    if(sortMode !== undefined) {
+        src += "&s=" + sortMode;
+    }
+    if(orientation !== undefined) {
+        src += '&o=' + orientation;
+    }
+    return src;
 }
 
 function getNumQuestions(courseJson) {
@@ -85,6 +101,7 @@ const onlyContainsNumbers = (str) => /^\d+$/.test(str);
 
 export {
     stringToHTML,
+    selectOption,
     
     getQuestionSrc,
     getUnitSrc,

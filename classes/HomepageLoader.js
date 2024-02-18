@@ -64,6 +64,7 @@ class HomepageLoader{
         numQuestions.textContent = getNumQuestions(courseJson);
         numFlashcardsSets.textContent = courseJson.flashcards.length;
         numFlashcards.textContent = getNumFlashcards(courseJson);
+        
         const coursePercent = getCoursePercentage(courseJson);
         progressBar.style.width = coursePercent + "%";
         progressPercent.textContent = Math.floor(coursePercent) + "%";

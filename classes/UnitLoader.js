@@ -46,7 +46,7 @@ class UnitLoader {
         container.addEventListener("click", () => {
             window.location.href = item.link;
         })
-        container.classList.add("word-card");
+        container.classList.add("list-card");
         let name = document.createElement("h1");
         name.innerHTML = item.name;
 

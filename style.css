@@ -38,6 +38,9 @@ h2{
     overflow: hidden;
 }
 /* Random */
+.i-m{
+    margin-right: 0.2em;
+}
 .hidden{
     display: none!important;
 }
@@ -149,6 +152,16 @@ input{
 .list > *{
     text-align: left;
     width: 100%;
+}
+.list-card{
+    padding: 0.5em;
+    font-size: 0.6em;
+    display: flex;
+}
+.list-card > *{
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
 }
 /* Boxes */
 .bottom-box{

@@ -22,7 +22,8 @@
 
         <div class="card">
             <div>
-                <h1>Flashcard (<span id="flashcard-count">?/?</span>)</h1>
+                <p id="flashcard-src">Loading...</p>
+                <h1><span id="flashcard-name">Flashcard</span> (<span id="flashcard-count">?/?</span>)</h1>
             </div>
 
             <div class="row card">
@@ -36,14 +37,14 @@
             </div>
         </div>
         <div class="row">
-            <select>
-                <option>no sort</option>
-                <option>random</option>
+            <select id="sort-mode-select">
+                <option value="linear">default order</option>
+                <option value="random">shuffled</option>
             </select>
-            <select>
-                <option>front up</option>
-                <option>back up</option>
-                <option>random</option>
+            <select id="orientation-select">
+                <option value="front">front up</option>
+                <option value="back">back up</option>
+                <option value="random">random</option>
             </select>
         </div>
 
@@ -53,9 +54,17 @@
 
             const urlParams = new URLSearchParams(window.location.search);
             if(urlParams.get("c") == null || urlParams.get("f") == null) window.location.href = "index.html";
-            if(urlParams.get("m") == null) urlParams.set("m", "linear");
+            if(!FlashcardLoader.isValidSortMethod(urlParams.get("s"))) {
+                console.error("error invalid sort mode: " + urlParams.get("s"));
+                urlParams.set("s", "linear");
+            }
+            if(!FlashcardLoader.isValidOrientation(urlParams.get("o"))) 
+            {
+                console.error("error invalid card orientation: " + urlParams.get("o"));
+                urlParams.set("o", "front");
+            }
 
-            FlashcardLoader.load(urlParams.get("c"), parseInt(urlParams.get("f")), document.getElementById("root"), urlParams.get("m"));
+            FlashcardLoader.load(urlParams.get("c"), parseInt(urlParams.get("f")), document.getElementById("root"), urlParams.get("s"), urlParams.get("o"));
         </script>
 
         <!-- My FontAwesome kit -->

@@ -1,4 +1,4 @@
-import { getCourseSrc, shuffle, stringToHTML } from "./Custom.js";
+import { getCourseSrc, shuffle, stringToHTML, getFlashcardSrc, selectOption } from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 
 function nextFlashcard() {
@@ -30,9 +30,27 @@ class FlashcardLoader{
             return shuffle(returnArr);
         },
     }
+    static orientations = {
+        front: (front, back) => {
+            back.classList.add("hidden");
+        },
+        back: (front, back) => {
+            front.classList.add("hidden");
+        },
+        random: (front, back) => {
+            if(Math.random() <= 0.5) {
+                front.classList.add("hidden");
+                return;
+            }
+            back.classList.add("hidden");
+        },
+    }
 
     static isValidSortMethod(method) {
-        return sortMethods[method] != null;
+        return method != null && this.sortMethods[method] != null;
+    }
+    static isValidOrientation(orientation) {
+        return orientation != null && this.orientations[orientation] != null;
     }
     /**
      * @param {string} courseKey - key for the course
@@ -40,9 +58,12 @@ class FlashcardLoader{
      * @param {number} questionIdx - index for the question
      * @param {Node} root - node where the question is to be loaded
      */
-    static load(courseKey, flashcardIdx, root, sortMethod){
+    static load(courseKey, flashcardIdx, root, sortMethod, orientation){
         this.root = root;
         this.getArr = this.sortMethods[sortMethod];
+        this.sortMethodVal = sortMethod;
+        this.orientation = this.orientations[orientation];
+        this.orientationVal = orientation;
 
         fetch('courses/' + courseKey + '.json')
             .then((response) => response.json())
@@ -50,7 +71,18 @@ class FlashcardLoader{
     }
 
     static loadFlashcards(courseJson, flashcardIdx, root) {
+        // Reset orientation if it's disabled for the current questions
+        if(courseJson.flashcards[flashcardIdx]["no-orientation"] !== undefined) {
+            document.getElementById("orientation-select").style.display = "none";
+            this.orientation = this.orientations["front"];
+            this.orientationVal = "front";
+        }
+
+        // IDK
         this.flashcards = this.getArr(courseJson, flashcardIdx);
+
+        document.getElementById("flashcard-src").textContent = courseJson.name;
+        document.getElementById("flashcard-name").textContent = courseJson.flashcards[flashcardIdx].name;
 
         // load the header links
         const courseLink = document.getElementById("course-link");
@@ -60,6 +92,10 @@ class FlashcardLoader{
         // Add cards
         this.currCard = 0;
         this.updateField();
+
+        selectOption(document.getElementById("sort-mode-select"), this.sortMethodVal);
+        
+        selectOption(document.getElementById("orientation-select"), this.orientationVal);
 
         // add event listener to root
         root.addEventListener("click", (event) => {
@@ -79,6 +115,13 @@ class FlashcardLoader{
         document.getElementById("flashcard-next").addEventListener("click", function() {
             nextFlashcard();
         })
+
+        document.getElementById("sort-mode-select").onchange = (event) => {
+            window.location.href = getFlashcardSrc(courseJson.key, flashcardIdx, event.target.value, this.orientationVal);
+        }
+        document.getElementById("orientation-select").onchange = (event) => {
+            window.location.href = getFlashcardSrc(courseJson.key, flashcardIdx, this.sortMethodVal, event.target.value);
+        }
     }
     static updateField() {
         this.root.innerHTML = "";
@@ -88,12 +131,14 @@ class FlashcardLoader{
         document.getElementById("flashcard-count").textContent = (this.currCard + 1) + "/" + this.flashcards.length;
     }
     static getFlashcardHTML(card) {
-        let visibleSide = stringToHTML("<div>");
-        let hiddenSide = stringToHTML("<div class='hidden'>");
-        FancyStringLoader.addHTML(visibleSide, card.front);
-        FancyStringLoader.addHTML(hiddenSide, card.back);
+        let front = stringToHTML("<div>");
+        let back = stringToHTML("<div>");
+        FancyStringLoader.addHTML(front, card.front);
+        FancyStringLoader.addHTML(back, card.back);
 
-        return [visibleSide, hiddenSide];
+        this.orientation(front, back);
+
+        return [front, back];
     }
 }
 

@@ -1,4 +1,5 @@
-import {getInput, NumInput} from "./Inputs.js";
+import {getInput} from "./Inputs.js";
+import { markQuestionAsComplete } from "./Storage.js";
 
 class Answer{
     #inputs = [];
@@ -6,8 +7,11 @@ class Answer{
      * 
      * @param { Node } confirmBtn 
      */
-    constructor(confirmBtn) {
+    constructor(confirmBtn, courseKey, unitIdx, questionIdx) {
         this.confirmBtn = confirmBtn;
+        this.courseKey = courseKey;
+        this.unitIdx = unitIdx;
+        this.questionIdx = questionIdx;
     }
     /**
      * @param { object } inputJson - structure with input properties
@@ -47,6 +51,7 @@ class Answer{
         if(this.checkAnswer()) {
             document.getElementById("failure").classList.add("hidden");
             document.getElementById("success").classList.remove("hidden");
+            markQuestionAsComplete(this.courseKey, this.unitIdx, this.questionIdx);
         } else {
             document.getElementById("success").classList.add("hidden");
             document.getElementById("failure").classList.remove("hidden");
@@ -61,7 +66,7 @@ class Answer{
     }
     #updateInputs() {
         for(let i of this.#inputs) {
-            i.obj.setCompleted(i.obj.checkAnswer());
+            i.obj.setCompleted(i.obj.checkAnswer(this.courseKey, this.unitIdx, this.questionIdx));
         }
     }
     /**

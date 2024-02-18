@@ -1,6 +1,7 @@
 import Answer from "./Answer.js";
-import {getCourseSrc, getUnitSrc, nextQuestion, onlyContainsNumbers} from "./Custom.js";
+import {getCourseSrc, getUnitSrc, nextQuestion, onlyContainsNumbers, stringToHTML} from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
+import { isQuestionComplete } from "./Storage.js";
 
 class QuestionLoader {
     /**
@@ -46,11 +47,15 @@ class QuestionLoader {
         let questionJson = courseJson.units[unitIdx].questions[questionIdx];
 
         document.getElementById("question-src").textContent = courseJson.name + " - " + courseJson.units[unitIdx].name;
-        document.getElementById("question-title").textContent = questionJson.name;
+        document.getElementById("question-title").innerHTML = "";
+        if(isQuestionComplete(courseJson.key, unitIdx, questionIdx)) {
+            document.getElementById("question-title").appendChild(stringToHTML('<i class="fa-solid fa-circle-check fa-sm i-m"></i>'));
+        }
+        document.getElementById("question-title").appendChild(document.createTextNode(questionJson.name));
         FancyStringLoader.addHTML(document.getElementById("question-desc"), questionJson.text);
 
         // Load Inputs
-        this.answerObj = new Answer(this.confirmBtn);
+        this.answerObj = new Answer(this.confirmBtn, courseJson.key, unitIdx, questionIdx);
         
         for(let i of questionJson.inputs) {
             this.answerObj.addInput(i);

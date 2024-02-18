@@ -3,6 +3,8 @@
  * - courseKey/unitIdx/questionIdx = (true || false)
  */
 
+// -- Retrieving data
+
 /**
  * 
  */
@@ -26,7 +28,14 @@ const isQuestionComplete = (courseKey, currUnit, currQuestion) => {
     return localStorage.getItem(courseKey + "/" + currUnit + "/" + currQuestion) === 'true';
 }
 
+// -- Manipulating data
+const markQuestionAsComplete = (courseKey, currUnit, currQuestion) => {
+    localStorage.setItem(courseKey + "/" + currUnit + "/" + currQuestion, "true");
+}
+
 export {
     getCoursePercentage,
     isQuestionComplete,
+
+    markQuestionAsComplete,
 }
