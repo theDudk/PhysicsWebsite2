@@ -1,4 +1,4 @@
-import { getCourseSrc, stringToHTML } from "./Custom.js";
+import { getCourseSrc, shuffle, stringToHTML } from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 
 function nextFlashcard() {
@@ -27,7 +27,7 @@ class FlashcardLoader{
         },
         random: (courseJson, flashcardIdx) => {
             let returnArr = courseJson.flashcards[flashcardIdx].cards;
-            return returnArr.sort();
+            return shuffle(returnArr);
         },
     }
 

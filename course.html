@@ -27,6 +27,12 @@
             </div>
             <div id="units" class="grid"></div>
         </div>
+        <div class="card">
+            <div>
+                <h1>Flashcards</h1>
+            </div>
+            <div id="flashcards" class="grid"></div>
+        </div>
 
         <!-- Logic -->
         <script type="module">
@@ -35,7 +41,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             if(urlParams.get("c") == null) window.location.href = "index.html";
 
-            let loader = new CourseLoader(document.getElementById("units"));
+            let loader = new CourseLoader(document.getElementById("units"), document.getElementById("flashcards"));
             loader.load(urlParams.get("c"));
         </script>
         

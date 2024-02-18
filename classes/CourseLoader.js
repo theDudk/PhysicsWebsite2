@@ -1,10 +1,12 @@
-import { getUnitSrc } from "./Custom.js";
+import { getUnitSrc, getFlashcardSrc } from "./Custom.js";
 
 class CourseLoader{
     units = [];
+    flashcards = [];
 
-    constructor(unitRoot) {
+    constructor(unitRoot, flashcardRoot) {
         this.unitRoot = unitRoot;
+        this.flashcardRoot = flashcardRoot;
     }
 
     load(courseKey){
@@ -22,8 +24,13 @@ class CourseLoader{
             let i = this.courseJson.units[idx];
             this.units.push({name: i.name, link: getUnitSrc(this.courseJson.key, idx)})
         }
+        for(let idx = 0; idx < this.courseJson.flashcards.length; idx++) {
+            let i = this.courseJson.flashcards[idx];
+            this.flashcards.push({name: i.name, link: getFlashcardSrc(this.courseJson.key, idx)})
+        }
 
         this.generateHTML(this.units, this.unitRoot);
+        this.generateHTML(this.flashcards, this.flashcardRoot);
     }
     generateHTML(array, root) {
         root.innerHTML = "";

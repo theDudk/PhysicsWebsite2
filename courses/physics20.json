@@ -138,16 +138,16 @@
             "name": "Flashcard set 1",
             "cards": [
                 {
-                    "front": "<img=https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg><b=Front> of the card",
-                    "back": "back of the card"
+                    "front": "<img=https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg><b=Card> 1 front",
+                    "back": "Card 1 back"
                 },
                 {
-                    "front": "Front of the card",
-                    "back": "back of the card"
+                    "front": "Card 2 front",
+                    "back": "Card 2 back"
                 },
                 {
-                    "front": "Front of the card",
-                    "back": "back of the card"
+                    "front": "Card 3 front",
+                    "back": "Card 3 back"
                 }
             ]
         }

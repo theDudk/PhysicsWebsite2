@@ -52,7 +52,8 @@
             import FlashcardLoader from './classes/FlashcardLoader.js';
 
             const urlParams = new URLSearchParams(window.location.search);
-            if(urlParams.get("c") == null || urlParams.get("f") == null || urlParams.get("m") == null) window.location.href = "index.html";
+            if(urlParams.get("c") == null || urlParams.get("f") == null) window.location.href = "index.html";
+            if(urlParams.get("m") == null) urlParams.set("m", "linear");
 
             FlashcardLoader.load(urlParams.get("c"), parseInt(urlParams.get("f")), document.getElementById("root"), urlParams.get("m"));
         </script>

@@ -2,11 +2,9 @@ import { getQuestionSrc, getCourseSrc } from "./Custom.js";
 
 class UnitLoader {
     questions = [];
-    flashcards = [];
 
-    constructor(questionRoot, flashcardRoot) {
+    constructor(questionRoot) {
         this.questionRoot = questionRoot;
-        this.flashcardRoot = flashcardRoot;
     }
 
     load(courseKey, unitIdx){

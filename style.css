@@ -41,10 +41,18 @@ h2{
 .hidden{
     display: none!important;
 }
+.pos-rel{
+    position: relative;
+}
 .top-right{
     position: absolute;
     top: 1em;
     right: 1em;
+}
+.bottom-right{
+    position: absolute;
+    bottom: 0.5em;
+    right: 0.5em;
 }
 .small{
     font-size: 0.7em;
@@ -209,4 +217,15 @@ input{
 .fs-img{
     width: 20em;
     max-width: 100%;
+}
+/* Progress bar */
+.progress{
+    height: 1em;
+    width: 100%;
+    background-color: grey;
+}
+.progress-bar{
+    background-color: green;
+    height: 100%;
+    width: 0;
 }

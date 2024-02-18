@@ -18,6 +18,33 @@ function getUnitSrc(courseKey, unitIdx) {
 function getCourseSrc(courseKey) {
     return "course.html?c=" + courseKey;
 }
+function getFlashcardSrc(courseKey, flashcardIdx) {
+    return "flashcards.html?c=" + courseKey + "&f=" + flashcardIdx;
+}
+
+function getNumQuestions(courseJson) {
+    let total = 0;
+    for(let i of courseJson.units) {
+        total += i.questions.length;
+    }
+    return total;
+}
+function getNumFlashcards(courseJson) {
+    let total = 0;
+    for(let i of courseJson.flashcards) {
+        total += i.cards.length;
+    }
+    return total;
+}
+
+// credit: https://www.freecodecamp.org/news/how-to-shuffle-an-array-of-items-using-javascript-or-typescript/
+const shuffle = (array) => { 
+    for (let i = array.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+};   
 
 /**
  * Returns the link to the next question
@@ -58,9 +85,17 @@ const onlyContainsNumbers = (str) => /^\d+$/.test(str);
 
 export {
     stringToHTML,
+    
     getQuestionSrc,
     getUnitSrc,
     getCourseSrc,
+    getFlashcardSrc,
+
+    getNumQuestions,
+    getNumFlashcards,
+
+    shuffle,
+    onlyContainsNumbers,
+    
     nextQuestion,
-    onlyContainsNumbers
 };
