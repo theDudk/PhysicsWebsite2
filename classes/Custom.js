@@ -75,7 +75,6 @@ function nextQuestion(courseJson, unitIdx, questionIdx, amt) {
     let currUnit = unitIdx;
     let currQuestion = questionIdx;
     while(true) {
-        console.log(currUnit+ ", " + currQuestion + ", " + amtLeft)
         currQuestion++;
         if(courseJson.units[currUnit].questions[currQuestion] == null) {
             currUnit++;
@@ -96,12 +95,27 @@ function nextQuestion(courseJson, unitIdx, questionIdx, amt) {
     }
 }
 
+/**
+ * returns the scientific notation form of the number with correct number of sigdigs
+ * @param {Number} num - number to convert to scientific notation
+ * @param {Number} sd - number of sigdigs
+ * @param {undefined || string} mode - optional mode override (exp)
+ * @returns string
+ */
+function getSD(num, sd, mode) {
+    switch(mode) {
+        case "exp": return num.toPrecision(sd);
+        default: return num.toPrecision(sd).replaceAll("e+", " * 10^");
+    }
+}
+
 // credit: https://pandaquests.medium.com/5-easy-ways-to-check-if-a-string-contains-only-numbers-in-javascript-305db38625e8
 const onlyContainsNumbers = (str) => /^\d+$/.test(str);
 
 export {
     stringToHTML,
     selectOption,
+    getSD,
     
     getQuestionSrc,
     getUnitSrc,

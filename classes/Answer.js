@@ -85,6 +85,15 @@ class Answer{
     getInputs() {
         return this.#inputs;
     }
+    getAnswerString() {
+        let str = "";
+        for(let i of this.#inputs) {
+            str += i.obj.toStr() + ", ";
+        }
+        str = str.substring(0, str.length - 2);
+
+        return str;
+    }
 }
 
 export default Answer;

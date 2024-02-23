@@ -6,6 +6,9 @@ class FancyStringLoader{
     }
 
     static notation = {
+        ignoreNot: (text) => {
+            return document.createTextNode(text);
+        },
         b: (text) => {
             let node = stringToHTML("<b>");
             node.textContent = text;
@@ -81,7 +84,10 @@ class FancyStringLoader{
             node.textContent = textContent;
 
             return node;
-        }
+        },
+        br: () => {
+            return document.createElement("br");
+        },
     }
     
     static addHTML(root, str) {
