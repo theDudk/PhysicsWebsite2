@@ -242,3 +242,39 @@ input{
     height: 100%;
     width: 0;
 }
+
+/* Dropdown */
+.dropdown{
+    position: relative;
+}
+.dropdown > button{
+    width: 100%;
+}
+.dropdown .dropdown-panel{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    display: none;
+
+    border: var(--border) solid black;
+    background-color: grey;
+    top: calc(100% + 0.5em);
+    left: 0;
+}
+.dropdown.open .dropdown-panel {
+    display: flex;
+}
+.dropdown-panel button{
+    text-align: left;
+    padding: 0.2em 0.3em;
+    gap: 1em;
+    display: flex;
+}
+.dropdown-panel button i{
+    float: right;
+    color: red;
+}
+.dropdown-panel button.selected i{
+    color: black;
+}

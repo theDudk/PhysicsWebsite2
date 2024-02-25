@@ -62,6 +62,11 @@ class QuestionLoader {
         }
         this.answerObj.setRoot(root);
 
+        // update fill elements
+        for(let i of document.querySelectorAll("[fill=answers]")) {
+            i.textContent = this.answerObj.getAnswerString();
+        }
+
         // Load Solutions
         if(questionJson.solution != null) {
             FancyStringLoader.addHTML(document.getElementById("solution-text"), questionJson.solution);
