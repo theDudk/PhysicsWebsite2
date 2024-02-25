@@ -2,95 +2,9 @@
     "name": "Physics 20",
     "key": "physics20",
     "units": [
-        {
-            "name": "Average Speed",
-            "questions": [
-                {
-                    "name": "HJSHFJKSHFJKSHJKF HJKSHF JKSFJK HSJKH JKSFHKJSHF KHSKJFH KJSFH KJSFH KJSHFKJ SKJFHSJKFH JKSFHIOHWJBFJKSHUWBCSHKFBSB F",
-                    "text": "<b=Here> <i=is> <sup=where> <sub=the> <c=red=question> <sub=would go...> <s=delta>Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
-                    "files": [
-                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
-                    ],
-                    "inputs": [
-                        {
-                            "type": "num",
-                            "answer": 1,
-                            "before-text": "A:",
-                            "after-text": "porcupines"
-                        },
-                        {
-                            "type": "sigdig",
-                            "answers": [
-                                {
-                                    "val": 120, 
-                                    "sd": 2
-                                }
-                            ]
-                        },
-                        {
-                            "type": "mc",
-                            "answers": [
-                                {
-                                    "text": "option1",
-                                    "val": false
-                                },
-                                {
-                                    "text": "option2",
-                                    "val": false
-                                },
-                                {
-                                    "text": "option3",
-                                    "val": true
-                                },
-                                {
-                                    "text": "option4",
-                                    "val": false
-                                }
-                            ]
-                        },
-                        {
-                            "type": "checklist",
-                            "answers": [
-                                {
-                                    "text": "option1",
-                                    "val": true
-                                },
-                                {
-                                    "text": "option2",
-                                    "val": false
-                                },
-                                {
-                                    "text": "option3",
-                                    "val": true
-                                },
-                                {
-                                    "text": "option4",
-                                    "val": false
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        }
+        
     ],
     "flashcards": [
-        {
-            "name": "Flashcard set 1",
-            "cards": [
-                {
-                    "front": "<img=https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg><b=Card> 1 front",
-                    "back": "Card 1 back"
-                },
-                {
-                    "front": "Card 2 front",
-                    "back": "Card 2 back"
-                },
-                {
-                    "front": "Card 3 front",
-                    "back": "Card 3 back"
-                }
-            ]
-        }
+        
     ]
 }

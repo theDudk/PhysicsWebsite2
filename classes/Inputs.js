@@ -67,9 +67,13 @@ class NumInput{
     }
     checkAnswer() {
         const val = this.node.querySelector("input").value;
-        return val == this.inputJson.answer;
+        for(let i of this.inputJson.answers) {
+            if(val == i) {
+                return true;
+            }
+        }
+        return false;
     }
-    
     /**
      * @param { Node } node
      * @param { Answer } answer 
@@ -80,7 +84,13 @@ class NumInput{
         })
     }
     toStr() {
-        return this.inputJson.answer;
+        let str = "";
+        for(let i of this.inputJson.answers) {
+            str += i + " or ";
+        }
+        str = str.substring(0, str.length - 4);
+
+        return str;
     }
 }
 class SDInput{
@@ -244,6 +254,8 @@ class ChecklistInput{
 
         this.node = container;
 
+        this.updateElements();
+
         return container;
     }
     /**
@@ -268,6 +280,17 @@ class ChecklistInput{
         }
         return true;
     }
+    updateElements() {
+        this.node.querySelector("[fill=checklist-name]").textContent = this.inputJson.text;
+        this.node.querySelector("[fill=checklist-num-selected]").textContent = this.#getNumSelected();
+    }
+    #getNumSelected() {
+        let count = 0;
+        for(let i of this.node.querySelectorAll(".dropdown-panel button")) {
+            if(i.classList.contains("selected")) count++;
+        }
+        return count;
+    }
     /**
      * @param { Answer } answer 
      */
@@ -283,6 +306,7 @@ class ChecklistInput{
         for(let i of this.node.querySelectorAll(".dropdown-panel button")) {
             i.addEventListener("click", () => {
                 toggleClass(i, "selected");
+                this.updateElements();
             })
         }
     }

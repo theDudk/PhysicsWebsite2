@@ -13,6 +13,8 @@ class UnitLoader {
             .then((json) => this.loadItems(json, unitIdx));
     }
     loadItems(courseJson, unitIdx) {
+        document.querySelector("[fill=unit-name]").textContent = courseJson.units[unitIdx].name;
+
         // store information
         this.courseJson = courseJson;
         this.unitIdx = unitIdx;

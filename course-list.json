@@ -2,5 +2,9 @@
     {
         "key": "physics20", 
         "name": "Physics 20"
+    },
+    {
+        "key": "experiments", 
+        "name": "Experimental Features"
     }
 ]
