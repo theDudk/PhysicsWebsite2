@@ -62,6 +62,18 @@ class QuestionLoader {
         }
         this.answerObj.setRoot(root);
 
+        // Load resources
+        for(let i of questionJson.files) {
+            let tab = document.createElement("div");
+            let icon = document.createElement("i");
+            icon.setAttribute("class", i.icon);
+
+            tab.appendChild(icon);
+            tab.appendChild(document.createTextNode(i.text));
+            tab.onclick = () => {window.open(i.src, "_blank")};
+            document.getElementById("question-resources").appendChild(tab);
+        }
+
         // update fill elements
         for(let i of document.querySelectorAll("[fill=answers]")) {
             i.textContent = this.answerObj.getAnswerString();

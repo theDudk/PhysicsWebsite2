@@ -22,6 +22,18 @@ header{
     padding: 1em;
     margin: auto;
 }
+.fs-spoiler{
+    background-color: black;
+    color: transparent;
+    transition: background-color 25ms 500ms, color 25ms 500ms;
+    cursor: pointer;
+}
+.fs-spoiler:active{
+    background-color: transparent;
+    color: black;
+    cursor: text;
+    transition: none;
+}
 /* Text parts */
 h1{
     font-size: 1.5em;

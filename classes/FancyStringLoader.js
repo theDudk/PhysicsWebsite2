@@ -1,4 +1,4 @@
-import { stringToHTML } from "./Custom.js";
+import { stringToHTML, getIndicesOf } from "./Custom.js";
 
 class FancyStringLoader{
     constructor() {
@@ -6,9 +6,6 @@ class FancyStringLoader{
     }
 
     static notation = {
-        ignoreNot: (text) => {
-            return document.createTextNode(text);
-        },
         b: (text) => {
             let node = stringToHTML("<b>");
             node.textContent = text;
@@ -88,6 +85,63 @@ class FancyStringLoader{
         br: () => {
             return document.createElement("br");
         },
+        table: (str) => {
+            let data = str.split("=");
+
+            let rows = data[0];
+            let columns = data[1];
+            data.splice(0,2);
+
+            let table = document.createElement("table");
+            for(let i = 0; i < rows; i++) {
+                const currRow = document.createElement("tr");
+                for(let j = 0; j < columns; j++) {
+                    let currData = document.createElement("td");
+                    currData.textContent = data[i * columns + j];
+                    currRow.appendChild(currData);
+                }
+                table.appendChild(currRow);
+            }
+
+            return table;
+        },
+        list: (items) => {
+            let data = items.split("=");
+
+            let type = data[0];
+            data.splice(0,1);
+            let list;
+
+            switch(type) {
+                case "ul":
+                case "dot":
+                    list = document.createElement("ul");
+                    break;
+
+                case "ol":
+                case "num":
+                    list = document.createElement("ol");
+                    break;
+
+                default:
+                    console.error("Invalid list type given: " + type);
+                    return document.createTextNode(items);
+            }
+
+            for(let i of data) {
+                let li = document.createElement("li");
+                li.textContent = i;
+                list.appendChild(li);
+            }
+
+            return list;
+        },
+        spoiler: (text) => {
+            let spoiler = stringToHTML("<span class='fs-spoiler'>");
+            spoiler.textContent = text;
+
+            return spoiler;
+        }
     }
     
     static addHTML(root, str) {

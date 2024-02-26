@@ -8,6 +8,24 @@ function stringToHTML(string) {
     temp.innerHTML = string;
     return temp.children[0];
 }
+function getIndicesOf(str, searchStr, caseSensitive) {
+    caseSensitive = (caseSensitive === undefined) ? false : caseSensitive;
+    // credit: https://stackoverflow.com/questions/3410464/how-to-find-indices-of-all-occurrences-of-one-string-in-another-in-javascript
+    var searchStrLen = searchStr.length;
+    if (searchStrLen == 0) {
+        return [];
+    }
+    var startIndex = 0, index, indices = [];
+    if (!caseSensitive) {
+        str = str.toLowerCase();
+        searchStr = searchStr.toLowerCase();
+    }
+    while ((index = str.indexOf(searchStr, startIndex)) > -1) {
+        indices.push(index);
+        startIndex = index + searchStrLen;
+    }
+    return indices;
+}
 
 function selectOption(select, optionValue) {
     for(let i of select.children) {
@@ -127,6 +145,8 @@ const onlyContainsNumbers = (str) => /^\d+$/.test(str);
 
 export {
     stringToHTML,
+    getIndicesOf,
+
     selectOption,
     toggleClass,
     getSD,

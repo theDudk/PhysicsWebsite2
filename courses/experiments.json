@@ -7,9 +7,13 @@
             "questions": [
                 {
                     "name": "HJSHFJKSHFJKSHJKF HJKSHF JKSFJK HSJKH JKSFHKJSHF KHSKJFH KJSFH KJSFH KJSHFKJ SKJFHSJKFH JKSFHIOHWJBFJKSHUWBCSHKFBSB F",
-                    "text": "<b=Here> <i=is> <sup=where> <sub=the> <c=red=question> <sub=would go...> <s=delta>Blah Blah Blah Blah, I have no idea I'm just placeholder text so ask that guy not me... SJKDSJKLDJSKLSJKLDJS?",
+                    "text": "<spoiler=helsahkjskfjs>",
                     "files": [
-                        "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                        {
+                            "text": "Test file",
+                            "icon": "fa-solid fa-mountain",
+                            "src": "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                        }
                     ],
                     "inputs": [
                         {
