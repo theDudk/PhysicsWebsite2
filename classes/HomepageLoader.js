@@ -1,5 +1,5 @@
-import { stringToHTML, getCourseSrc, getNumQuestions, getNumFlashcards } from "./Custom.js";
-import { getCoursePercentage } from "./Storage.js";
+import { stringToHTML, toggleClass, getCourseSrc, getNumQuestions, getNumFlashcards } from "./Custom.js";
+import { getCoursePercentage, isCoursePinned, togglePinCourse } from "./Storage.js";
 
 class HomepageLoader{
     courses = [];
@@ -14,6 +14,10 @@ class HomepageLoader{
             .then((json) => this.loadCourses(json));
     }
     loadCourses(courseList){
+        courseList.sort((c1, c2) => {
+            // true = 1, false = 2
+            return isCoursePinned(c1.key) && !isCoursePinned(c2.key) ? -1 : 1;
+        })
         for(let i of courseList){
             this.generateHTML(i);
         }
@@ -30,6 +34,14 @@ class HomepageLoader{
         let name = document.createElement("h1");
         name.textContent = course.name;
 
+        let pinnedBtn = stringToHTML('<button id=' + course.key + '--pin class="top-right"><i class="fa-solid fa-thumbtack"></i></button>');
+        pinnedBtn.addEventListener("click", () => {
+            togglePinCourse(course.key);
+            toggleClass(pinnedBtn, "unfocus");
+            document.getElementById("reload-to-update").classList.remove("hidden");
+        })
+        if(!isCoursePinned(course.key)) pinnedBtn.classList.add("unfocus");
+
         let numUnits = stringToHTML("<div><i class='fa-solid fa-box'></i> <span id='" + course.key + "--unit-count'>...</span> Units (<span id='" + course.key + "--question-count'>...</span> Questions)</div>");
         let numFlashcards = stringToHTML("<div><i class='fa-regular fa-note-sticky'></i> <span id='" + course.key + "--flashcard-count'>...</span> Flashcard sets (<span id='" + course.key + "--card-count'>...</span> Cards)</div>");
 
@@ -42,6 +54,7 @@ class HomepageLoader{
         })
 
         container.appendChild(name);
+        container.appendChild(pinnedBtn);
         container.appendChild(progressBar);
         container.appendChild(progressPercent);
 
