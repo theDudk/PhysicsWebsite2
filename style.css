@@ -82,6 +82,12 @@ button{
 /* Inputs */
 .input-div {
     position: relative;
+    display: flex;
+    align-items: center;
+}
+.input-div:has(.check:not(.hidden)) {
+    padding-right: 2.5em;
+    transition: padding-right 250ms;
 }
 .input-div > button{
     padding: 0.5em 0.75em;
@@ -93,13 +99,11 @@ input{
 }
 .input-div > .check {
     position: absolute;
-    right: 1em;
+    right: 0.75em;
     top: 50%;
     transform: translateY(-50%);
+    box-shadow: 0 0 16px white;
     background: radial-gradient(circle, green 0%, green 70%, transparent 71%);
-}
-.input-div:not(:has(.check.hidden)) > input {
-    padding-right: 2.5em;
 }
 /* Cards */
 .card{
@@ -261,11 +265,9 @@ input{
 }
 
 /* Dropdown */
-.dropdown{
-    position: relative;
-}
 .dropdown > button{
     width: 100%;
+    position: relative;
 }
 .dropdown .dropdown-panel{
     position: absolute;

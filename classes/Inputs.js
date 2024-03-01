@@ -42,7 +42,19 @@ class NumInput{
         let container = stringToHTML("<div class='input-div'>");
         let input = stringToHTML("<input type='tel'>");
 
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span></span>");
+            beforeText.textContent = this.inputJson["before-text"];
+            container.appendChild(beforeText)
+        }
         container.appendChild(input);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span></span>");
+            afterText.textContent = this.inputJson["after-text"];
+            container.appendChild(afterText);
+        }
         container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check check hidden"></i>'));
 
         this.node = container;
@@ -108,7 +120,19 @@ class SDInput{
         let container = stringToHTML("<div class='input-div'>");
         let input = stringToHTML("<input type='text'>");
 
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span></span>");
+            beforeText.textContent = this.inputJson["before-text"];
+            container.appendChild(beforeText)
+        }
         container.appendChild(input);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span></span>");
+            afterText.textContent = this.inputJson["after-text"];
+            container.appendChild(afterText);
+        }
         container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check check hidden"></i>'));
 
         this.node = container;
@@ -186,7 +210,19 @@ class MCInput{
             idx++;
         }
 
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span></span>");
+            beforeText.textContent = this.inputJson["before-text"];
+            container.appendChild(beforeText)
+        }
         container.appendChild(input);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span></span>");
+            afterText.textContent = this.inputJson["after-text"];
+            container.appendChild(afterText);
+        }
         container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check check hidden"></i>'));
 
         this.node = container;
@@ -248,8 +284,21 @@ class ChecklistInput{
             idx++;
         }
 
-        container.appendChild(stringToHTML("<button><span fill='checklist-name'>loading</span> (<span fill='checklist-num-selected'>0</span>)</button>"));
-        container.appendChild(items);
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span></span>");
+            beforeText.textContent = this.inputJson["before-text"];
+            container.appendChild(beforeText)
+        }
+        let btn = stringToHTML("<button><span fill='checklist-name'>loading</span> (<span fill='checklist-num-selected'>0</span>)</button>");
+        container.appendChild(btn);
+        btn.appendChild(items);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span></span>");
+            afterText.textContent = this.inputJson["after-text"];
+            container.appendChild(afterText);
+        }
         container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check check hidden"></i>'));
 
         this.node = container;
@@ -299,7 +348,8 @@ class ChecklistInput{
             if(this.node.contains(event.target)) return;
             this.node.classList.remove("open");
         })
-        this.node.querySelector("button").addEventListener("click", () => {
+        this.node.querySelector(".dropdown > button").addEventListener("click", (event) => {
+            if(this.node.querySelector(".dropdown-panel").contains(event.target)) return;
             toggleClass(this.node, "open");
         })
 

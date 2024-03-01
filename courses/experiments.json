@@ -26,6 +26,8 @@
                         },
                         {
                             "type": "sigdig",
+                            "before-text": "B:",
+                            "after-text": "hello",
                             "answers": [
                                 {
                                     "val": 120, 
@@ -35,6 +37,7 @@
                         },
                         {
                             "type": "mc",
+                            "before-text": "C:",
                             "answers": [
                                 {
                                     "text": "option1",
@@ -57,6 +60,8 @@
                         {
                             "type": "checklist",
                             "text": "Example Checklist",
+                            "before-text": "D:",
+                            "after-text": "hello",
                             "answers": [
                                 {
                                     "text": "option1",
