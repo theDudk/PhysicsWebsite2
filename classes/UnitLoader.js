@@ -1,4 +1,5 @@
-import { getQuestionSrc, getCourseSrc } from "./Custom.js";
+import { getQuestionSrc, getCourseSrc, stringToHTML } from "./Custom.js";
+import { isQuestionComplete } from "./Storage.js";
 
 class UnitLoader {
     questions = [];
@@ -29,11 +30,21 @@ class UnitLoader {
         this.loadQuestions();
     }
     loadQuestions() {
+        // create an array with information for each question
+        let nonCompletedQuestions = [];
+        let completedQuestions = [];
         for(let idx = 0; idx < this.unitJson.questions.length; idx++) {
             let i = this.unitJson.questions[idx];
-            this.questions.push({name: i.name, link: getQuestionSrc(this.courseJson.key, this.unitIdx, idx)})
+            let item = {name: i.name, completed: isQuestionComplete(this.courseJson.key, this.unitIdx, idx), link: getQuestionSrc(this.courseJson.key, this.unitIdx, idx)};
+            if(isQuestionComplete(this.courseJson.key, this.unitIdx, idx)) {
+                completedQuestions.push(item);
+                continue;
+            }
+            nonCompletedQuestions.push(item);
         }
+        this.questions = nonCompletedQuestions.concat(completedQuestions);
 
+        // generate the html elements for each question
         this.generateHTML(this.questions, this.questionRoot);
     }
     generateHTML(array, root) {
@@ -51,6 +62,8 @@ class UnitLoader {
         container.classList.add("list-card");
         let name = document.createElement("h1");
         name.innerHTML = item.name;
+        
+        if(item.completed) container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check"></i>'));
 
         container.appendChild(name);
         return container;

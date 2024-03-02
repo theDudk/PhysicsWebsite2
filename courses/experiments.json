@@ -6,7 +6,163 @@
             "name": "functionality",
             "questions": [
                 {
-                    "name": "HJSHFJKSHFJKSHJKF HJKSHF JKSFJK HSJKH JKSFHKJSHF KHSKJFH KJSFH KJSFH KJSHFKJ SKJFHSJKFH JKSFHIOHWJBFJKSHUWBCSHKFBSB F",
+                    "name": "Example 1",
+                    "text": "<spoiler=helsahkjskfjs>",
+                    "files": [
+                        {
+                            "text": "Test file",
+                            "icon": "fa-solid fa-mountain",
+                            "src": "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                1
+                            ],
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "before-text": "B:",
+                            "after-text": "hello",
+                            "answers": [
+                                {
+                                    "val": 120, 
+                                    "sd": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "C:",
+                            "answers": [
+                                {
+                                    "text": "option1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option3",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option4",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "checklist",
+                            "text": "Example Checklist",
+                            "before-text": "D:",
+                            "after-text": "hello",
+                            "answers": [
+                                {
+                                    "text": "option1",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option3",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option4",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Example 2",
+                    "text": "<spoiler=helsahkjskfjs>",
+                    "files": [
+                        {
+                            "text": "Test file",
+                            "icon": "fa-solid fa-mountain",
+                            "src": "https://www.britannica.com/science/mountain-landform#:~:text=mountain%2C%20landform%20that%20rises%20prominently,area%2C%20and%20considerable%20local%20relief."
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                1
+                            ],
+                            "before-text": "A:",
+                            "after-text": "porcupines"
+                        },
+                        {
+                            "type": "sigdig",
+                            "before-text": "B:",
+                            "after-text": "hello",
+                            "answers": [
+                                {
+                                    "val": 120, 
+                                    "sd": 2
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "C:",
+                            "answers": [
+                                {
+                                    "text": "option1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option3",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option4",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "checklist",
+                            "text": "Example Checklist",
+                            "before-text": "D:",
+                            "after-text": "hello",
+                            "answers": [
+                                {
+                                    "text": "option1",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "option3",
+                                    "val": true
+                                },
+                                {
+                                    "text": "option4",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Example 3",
                     "text": "<spoiler=helsahkjskfjs>",
                     "files": [
                         {
