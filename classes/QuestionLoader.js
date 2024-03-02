@@ -1,5 +1,5 @@
 import Answer from "./Answer.js";
-import {getCourseSrc, getUnitSrc, nextQuestion, onlyContainsNumbers, stringToHTML} from "./Custom.js";
+import {getCourseSrc, getUnitSrc, getQuestionSrc, nextQuestion, onlyContainsNumbers, stringToHTML} from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 import { isQuestionComplete } from "./Storage.js";
 
@@ -37,11 +37,16 @@ class QuestionLoader {
 
         // load the header links
         const courseLink = document.getElementById("course-link");
-        const unitLink = document.getElementById("unit-link");
         courseLink.textContent = courseJson.name;
-        unitLink.textContent = courseJson.units[unitIdx].name;
         courseLink.href = getCourseSrc(courseJson.key);
+
+        const unitLink = document.getElementById("unit-link");
+        unitLink.textContent = courseJson.units[unitIdx].name;
         unitLink.href = getUnitSrc(courseJson.key, unitIdx);
+
+        const questionLink = document.getElementById("question-link");
+        questionLink.textContent = courseJson.units[unitIdx].questions[questionIdx].name;
+        questionLink.href = getQuestionSrc(courseJson.key, unitIdx, questionIdx);
 
         // load the question
         let questionJson = courseJson.units[unitIdx].questions[questionIdx];

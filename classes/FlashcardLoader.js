@@ -1,4 +1,4 @@
-import { getCourseSrc, shuffle, stringToHTML, getFlashcardSrc, selectOption } from "./Custom.js";
+import { getCourseSrc, getUnitSrc, getFlashcardSrc, shuffle, stringToHTML, selectOption } from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 
 function nextFlashcard() {
@@ -78,7 +78,7 @@ class FlashcardLoader{
             this.orientationVal = "front";
         }
 
-        // IDK
+        // Load page info
         this.flashcards = this.getArr(courseJson, flashcardIdx);
 
         document.getElementById("flashcard-src").textContent = courseJson.name;
@@ -87,7 +87,11 @@ class FlashcardLoader{
         // load the header links
         const courseLink = document.getElementById("course-link");
         courseLink.textContent = courseJson.name;
-        courseLink.href = getCourseSrc(courseJson.key);
+        courseLink.onclick = () => {window.location.href = getCourseSrc(courseJson.key)};
+                
+        const flashcardLink = document.getElementById("flashcard-link");
+        flashcardLink.textContent = courseJson.flashcards[flashcardIdx].name;
+        flashcardLink.onclick = () => {window.location.href = getFlashcardSrc(courseJson.key, flashcardIdx)};
 
         // Add cards
         this.currCard = 0;

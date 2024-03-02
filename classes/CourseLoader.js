@@ -1,4 +1,4 @@
-import { getUnitSrc, getFlashcardSrc } from "./Custom.js";
+import { getCourseSrc, getUnitSrc, getFlashcardSrc } from "./Custom.js";
 
 class CourseLoader{
     units = [];
@@ -15,6 +15,12 @@ class CourseLoader{
             .then((json) => this.loadItems(json));
     }
     loadItems(courseJson) {
+        // load the header links
+        const courseLink = document.getElementById("course-link");
+        courseLink.textContent = courseJson.name;
+        courseLink.onclick = () => {window.location.href = getCourseSrc(courseJson.key)};
+
+        // load the units
         this.courseJson = courseJson;
 
         this.loadUnits();

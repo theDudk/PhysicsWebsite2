@@ -1,4 +1,4 @@
-import { getQuestionSrc, getCourseSrc, stringToHTML } from "./Custom.js";
+import { getQuestionSrc, getCourseSrc, stringToHTML, getUnitSrc } from "./Custom.js";
 import { isQuestionComplete } from "./Storage.js";
 
 class UnitLoader {
@@ -21,10 +21,14 @@ class UnitLoader {
         this.unitIdx = unitIdx;
         this.unitJson = courseJson.units[unitIdx];
 
-         // load the header links
-         const courseLink = document.getElementById("course-link");
-         courseLink.textContent = courseJson.name;
-         courseLink.href = getCourseSrc(courseJson.key);
+        // load the header links
+        const courseLink = document.getElementById("course-link");
+        courseLink.textContent = courseJson.name;
+        courseLink.onclick = () => {window.location.href = getCourseSrc(courseJson.key)};
+
+        const unitLink = document.getElementById("unit-link");
+        unitLink.textContent = courseJson.units[unitIdx].name;
+        unitLink.onclick = () => {window.location.href = getUnitSrc(courseJson.key, unitIdx)};
 
         // load the question nodes
         this.loadQuestions();

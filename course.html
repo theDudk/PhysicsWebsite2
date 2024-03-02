@@ -15,10 +15,28 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        <!-- Header stuff -->
         <header>
             <button onclick="window.location.href='index.html'"><i class="fa-solid fa-rocket fa-xl"></i></button>
+            <div>
+                <button onclick="document.getElementById('header').classList.remove('hidden')"><i class="fa-solid fa-bars"></i></button>
+            </div>
         </header>
 
+        <div id="header" class="hidden column box-full">
+            <div class="row">
+                <button onclick="window.location.href='index.html'"><i class="fa-solid fa-rocket fa-xl"></i> StudyThing</button>
+                <button onclick="document.getElementById('header').classList.add('hidden')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <p>General</p>
+            <button class="disabled"><i class="fa-solid fa-person-digging"></i> About (WIP)</button>
+            <button class="disabled"><i class="fa-solid fa-person-digging"></i> Builder (WIP)</button>
+            <button class="unfocus" onclick="window.location.href='index.html'">Homepage</button>
+            <button id="course-link">Loading...</button>
+        </div>
+
+        <!-- Page content -->
         <h1>Course name</h1>
 
         <div class="card">
