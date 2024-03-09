@@ -9,7 +9,7 @@ sub {
 }
 
 sup {
-  top: 0em;
+  top: -0.2em;
   left: 0;
 }
 
@@ -31,7 +31,8 @@ pre, code {
 [type=url],
 [type=week],
 textarea,
-select {
+select,
+.dropdown-btn {
   padding: 0.5em 0.75em;
   font-size: 1rem;
   line-height: 1.5;

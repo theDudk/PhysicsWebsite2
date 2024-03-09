@@ -1,7 +1,7 @@
 import Answer from "./Answer.js";
 import {getCourseSrc, getUnitSrc, getQuestionSrc, nextQuestion, onlyContainsNumbers, stringToHTML} from "./Custom.js";
 import FancyStringLoader from "./FancyStringLoader.js";
-import { isQuestionComplete } from "./Storage.js";
+import { isQuestionComplete, getLastPageSkips, setLastPageSkips } from "./Storage.js";
 
 class QuestionLoader {
     /**
@@ -37,16 +37,28 @@ class QuestionLoader {
 
         // load the header links
         const courseLink = document.getElementById("course-link");
-        courseLink.textContent = courseJson.name;
-        courseLink.href = getCourseSrc(courseJson.key);
+        courseLink.innerHTML = "";
+        let courseText = document.createElement("span");
+        courseText.textContent = courseJson.name;
+        courseLink.appendChild(stringToHTML("<i class='" + courseJson.icon + "'>"));
+        courseLink.appendChild(courseText);
+        courseLink.onclick = function() {window.location.href = getCourseSrc(courseJson.key)};
 
         const unitLink = document.getElementById("unit-link");
-        unitLink.textContent = courseJson.units[unitIdx].name;
-        unitLink.href = getUnitSrc(courseJson.key, unitIdx);
+        unitLink.innerHTML = "";
+        let unitText = document.createElement("span");
+        unitText.textContent = courseJson.units[unitIdx].name;
+        unitLink.appendChild(stringToHTML("<i class='" + courseJson.units[unitIdx].icon + "'>"));
+        unitLink.appendChild(unitText);
+        unitLink.onclick = function() {window.location.href = getUnitSrc(courseJson.key, unitIdx)};
 
         const questionLink = document.getElementById("question-link");
-        questionLink.textContent = courseJson.units[unitIdx].questions[questionIdx].name;
-        questionLink.href = getQuestionSrc(courseJson.key, unitIdx, questionIdx);
+        questionLink.innerHTML = "";
+        let questionText = document.createElement("span");
+        questionText.textContent = courseJson.units[unitIdx].questions[questionIdx].name;;
+        questionLink.appendChild(stringToHTML('<i class="fa-solid fa-circle-question"></i>'));
+        questionLink.appendChild(questionText);
+        questionLink.onclick = function() {window.location.href = getQuestionSrc(courseJson.key, unitIdx, questionIdx)};
 
         // load the question
         let questionJson = courseJson.units[unitIdx].questions[questionIdx];
@@ -69,12 +81,14 @@ class QuestionLoader {
 
         // Load resources
         for(let i of questionJson.files) {
-            let tab = document.createElement("div");
+            let tab = stringToHTML("<button class='btn'></button>");
             let icon = document.createElement("i");
             icon.setAttribute("class", i.icon);
+            let text = document.createElement("span");
+            text.textContent = i.text;
 
             tab.appendChild(icon);
-            tab.appendChild(document.createTextNode(i.text));
+            tab.appendChild(text);
             tab.onclick = () => {window.open(i.src, "_blank")};
             document.getElementById("question-resources").appendChild(tab);
         }
@@ -85,10 +99,13 @@ class QuestionLoader {
         }
 
         // Load Solutions
+        if(getLastPageSkips() != null) {
+            document.getElementById("success-next-input").setAttribute("value", getLastPageSkips());
+        }
         if(questionJson.solution != null) {
             FancyStringLoader.addHTML(document.getElementById("solution-text"), questionJson.solution);
         } else {
-            FancyStringLoader.addHTML(document.getElementById("solution-text"), "Whoops! There doesn't seem to be a solution for this question. <a=index.html=contribute by submitting your own>!");
+            FancyStringLoader.addHTML(document.getElementById("solution-text"), "Whoops! There doesn't seem to be a solution for this question.");
         }
 
         this.loadEventListeners();
@@ -123,6 +140,7 @@ class QuestionLoader {
         document.getElementById("success-next").addEventListener("click", function() {
             const val = nextInput.value;
             const amt = (val != null && onlyContainsNumbers(val) && parseInt(val) > 0) ? val : 1;
+            setLastPageSkips(amt);
             window.location.href = nextQuestion(courseJson, unitIdx, questionIdx, amt);
         });
 

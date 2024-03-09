@@ -1,4 +1,4 @@
-import { getCourseSrc, getUnitSrc, getFlashcardSrc } from "./Custom.js";
+import { stringToHTML, getCourseSrc, getUnitSrc, getFlashcardSrc } from "./Custom.js";
 
 class CourseLoader{
     units = [];
@@ -16,9 +16,14 @@ class CourseLoader{
     }
     loadItems(courseJson) {
         // load the header links
+        // load the header links
         const courseLink = document.getElementById("course-link");
-        courseLink.textContent = courseJson.name;
-        courseLink.onclick = () => {window.location.href = getCourseSrc(courseJson.key)};
+        courseLink.innerHTML = "";
+        let courseText = document.createElement("span");
+        courseText.textContent = courseJson.name;
+        courseLink.appendChild(stringToHTML("<i class='" + courseJson.icon + "'>"));
+        courseLink.appendChild(courseText);
+        courseLink.onclick = function() {window.location.href = getCourseSrc(courseJson.key)};
 
         // load the units
         this.courseJson = courseJson;
@@ -28,11 +33,11 @@ class CourseLoader{
     loadUnits() {
         for(let idx = 0; idx < this.courseJson.units.length; idx++) {
             let i = this.courseJson.units[idx];
-            this.units.push({name: i.name, link: getUnitSrc(this.courseJson.key, idx)})
+            this.units.push({name: i.name, link: getUnitSrc(this.courseJson.key, idx), icon: i.icon})
         }
         for(let idx = 0; idx < this.courseJson.flashcards.length; idx++) {
             let i = this.courseJson.flashcards[idx];
-            this.flashcards.push({name: i.name, link: getFlashcardSrc(this.courseJson.key, idx)})
+            this.flashcards.push({name: i.name, link: getFlashcardSrc(this.courseJson.key, idx), icon: i.icon})
         }
 
         this.generateHTML(this.units, this.unitRoot);
@@ -46,14 +51,18 @@ class CourseLoader{
         }
     }
     createItemNode(item) {
+        console.log(item)
         let container = document.createElement("button");
         container.addEventListener("click", () => {
             window.location.href = item.link;
         })
-        container.classList.add("word-card");
-        let name = document.createElement("h1");
+        container.classList.add("btn");
+        let name = document.createElement("span");
         name.innerHTML = item.name;
+        let icon = document.createElement("i");
+        icon.className = item.icon;
 
+        container.appendChild(icon);
         container.appendChild(name);
         return container;
     }

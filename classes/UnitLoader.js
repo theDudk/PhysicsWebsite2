@@ -23,12 +23,20 @@ class UnitLoader {
 
         // load the header links
         const courseLink = document.getElementById("course-link");
-        courseLink.textContent = courseJson.name;
-        courseLink.onclick = () => {window.location.href = getCourseSrc(courseJson.key)};
+        courseLink.innerHTML = "";
+        let courseText = document.createElement("span");
+        courseText.textContent = courseJson.name;
+        courseLink.appendChild(stringToHTML("<i class='" + courseJson.icon + "'>"));
+        courseLink.appendChild(courseText);
+        courseLink.onclick = function() {window.location.href = getCourseSrc(courseJson.key)};
 
         const unitLink = document.getElementById("unit-link");
-        unitLink.textContent = courseJson.units[unitIdx].name;
-        unitLink.onclick = () => {window.location.href = getUnitSrc(courseJson.key, unitIdx)};
+        unitLink.innerHTML = "";
+        let unitText = document.createElement("span");
+        unitText.textContent = courseJson.units[unitIdx].name;
+        unitLink.appendChild(stringToHTML("<i class='" + courseJson.units[unitIdx].icon + "'>"));
+        unitLink.appendChild(unitText);
+        unitLink.onclick = function() {window.location.href = getUnitSrc(courseJson.key, unitIdx)};
 
         // load the question nodes
         this.loadQuestions();
@@ -63,11 +71,16 @@ class UnitLoader {
         container.addEventListener("click", () => {
             window.location.href = item.link;
         })
-        container.classList.add("list-card");
-        let name = document.createElement("h1");
+        container.classList.add("btn");
+        let name = document.createElement("span");
         name.innerHTML = item.name;
         
-        if(item.completed) container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check"></i>'));
+        if(item.completed) {
+            container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check"></i>'));
+            container.classList.add("btn-warning");
+        } else{
+            container.appendChild(stringToHTML('<i class="fa-solid fa-circle-question"></i>'));
+        }
 
         container.appendChild(name);
         return container;

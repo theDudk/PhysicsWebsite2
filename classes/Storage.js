@@ -27,8 +27,11 @@ const isQuestionComplete = (courseKey, currUnit, currQuestion) => {
 const isCoursePinned = (courseKey) => {
     return localStorage.getItem("pinned/" + courseKey) !== null;
 }
+const getLastPageSkips = () => {
+    return sessionStorage.getItem("lastPageSkips");
+}
 
-// -- Manipulating data
+// -- Manipulating local storage
 const markQuestionAsComplete = (courseKey, currUnit, currQuestion) => {
     localStorage.setItem(courseKey + "/" + currUnit + "/" + currQuestion, "");
 }
@@ -39,12 +42,19 @@ const togglePinCourse = (courseKey) =>{
     }
     localStorage.removeItem("pinned/" + courseKey);
 }
+// -- Manipulating session storage
+const setLastPageSkips = (num) => {
+    sessionStorage.setItem("lastPageSkips", num);
+}
 
 export {
     getCoursePercentage,
     isQuestionComplete,
     isCoursePinned,
+    getLastPageSkips,
 
     markQuestionAsComplete,
     togglePinCourse,
+
+    setLastPageSkips,
 }

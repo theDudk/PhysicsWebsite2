@@ -30,17 +30,25 @@ class HomepageLoader{
     }
 
     generateHTML(course){
-        let container = stringToHTML("<div class='card pos-rel'>");
-        let name = document.createElement("h1");
-        name.textContent = course.name;
+        let container = stringToHTML("<div class='card pos-rel box card mt-3'>");
+        let top = stringToHTML("<div class='box box-top row'></div>");
+        let mid = stringToHTML("<div class='box box-thin p-2 box-no-border column'></div>");
+        let bottom = stringToHTML("<div class='box box-end'></div>");
 
-        let pinnedBtn = stringToHTML('<button id=' + course.key + '--pin class="top-right"><i class="fa-solid fa-thumbtack"></i></button>');
+        let nameIcon = document.createElement("i");
+        nameIcon.className = course.icon;
+        
+        let name = document.createElement("h1");
+        name.appendChild(nameIcon);
+        name.appendChild(document.createTextNode(course.name));
+
+        let pinnedBtn = stringToHTML('<button id=' + course.key + '--pin class="btn btn-icon"><i class="fa-solid fa-thumbtack"></i></button>');
         pinnedBtn.addEventListener("click", () => {
             togglePinCourse(course.key);
-            toggleClass(pinnedBtn, "unfocus");
+            toggleClass(pinnedBtn, "btn-warning");
             document.getElementById("reload-to-update").classList.remove("hidden");
         })
-        if(!isCoursePinned(course.key)) pinnedBtn.classList.add("unfocus");
+        if(isCoursePinned(course.key)) pinnedBtn.classList.add("btn-warning");
 
         let numUnits = stringToHTML("<div><i class='fa-solid fa-box'></i> <span id='" + course.key + "--unit-count'>...</span> Units (<span id='" + course.key + "--question-count'>...</span> Questions)</div>");
         let numFlashcards = stringToHTML("<div><i class='fa-regular fa-note-sticky'></i> <span id='" + course.key + "--flashcard-count'>...</span> Flashcard sets (<span id='" + course.key + "--card-count'>...</span> Cards)</div>");
@@ -48,20 +56,24 @@ class HomepageLoader{
         let progressBar = stringToHTML('<div class="progress"><div id="' + course.key + '--progress-bar" class="progress-bar"></div></div>')
         let progressPercent = stringToHTML("<p><span id='" + course.key + "--progress-percent'>...</span> complete</p>")
 
-        let button = stringToHTML("<button class='bottom-right'> Continue </button>");
+        let button = stringToHTML("<button class='btn'> Continue </button>");
         button.addEventListener("click", function(){
             window.location.href = getCourseSrc(course.key);
         })
 
-        container.appendChild(name);
-        container.appendChild(pinnedBtn);
-        container.appendChild(progressBar);
-        container.appendChild(progressPercent);
+        top.appendChild(name);
+        top.appendChild(pinnedBtn);
 
-        container.appendChild(numUnits);
-        container.appendChild(numFlashcards);
+        mid.appendChild(progressBar);
+        mid.appendChild(progressPercent);
+        mid.appendChild(numUnits);
+        mid.appendChild(numFlashcards);
 
-        container.appendChild(button);
+        bottom.appendChild(button);
+
+        container.appendChild(top);
+        container.appendChild(mid);
+        container.appendChild(bottom);
         this.root.appendChild(container);
     }
     updateHTML(courseJson) {
