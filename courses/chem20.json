@@ -500,7 +500,7 @@
                 },
                 {
                     "name": "Booklet 1 (5)",
-                    "text": "Use the periodic table to fill in the following information on the element in group 16 and period 5",
+                    "text": "Use the periodic table to fill in the following information on the element in group 17 and period 5",
                     "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
                     "inputs": [
                         {
