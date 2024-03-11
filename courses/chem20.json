@@ -1203,7 +1203,7 @@
                             "answers": [
                                 {
                                     "text": "Solid",
-                                    "val": true
+                                    "val": false
                                 },
                                 {
                                     "text": "Liquid",
@@ -1211,7 +1211,7 @@
                                 },
                                 {
                                     "text": "Gas",
-                                    "val": false
+                                    "val": true
                                 }
                             ]
                         },
