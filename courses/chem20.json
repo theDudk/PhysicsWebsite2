@@ -1,0 +1,3285 @@
+{
+    "key": "chem20",
+    "name": "Chemistry 20",
+    "icon": "fa-solid fa-square-plus",
+    "files": [
+        {
+            "text": "Data sheet",
+            "icon": "fa-solid fa-table-cells",
+            "src": "./files/chem20/periodic-table/periodic-table.pdf"
+        }
+    ],
+    "units": [
+        {
+            "name": "Science 10 Review",
+            "icon": "fa-solid fa-repeat",
+            "questions": [
+                {
+                    "name": "Booklet 1 (1)",
+                    "text": "Use the periodic table to fill in the following information on chlorine",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 17
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 17
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (2)",
+                    "text": "Use the periodic table to fill in the following information on magnesium",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mg"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 12
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (3)",
+                    "text": "Use the periodic table to fill in the following information on the element with an atomic number of 30",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "zinc"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Zn"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 12
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (4)",
+                    "text": "Use the periodic table to fill in the following information on the element with the IUPAC symbol of N",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "nitrogen"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 7
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 15
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (5)",
+                    "text": "Use the periodic table to fill in the following information on the element in group 16 and period 5",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "iodine"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "I"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 53
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (6)",
+                    "text": "Use the periodic table to fill in the following information on the element with an atomic number of 79",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "gold"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Au"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 11
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 6
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (7)",
+                    "text": "Use the periodic table to fill in the following information on the element in period 3 that is a part of the alkali metals family",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "sodium"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Na"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 11
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (8)",
+                    "text": "Use the periodic table to fill in the following information on thorium",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Th"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 90
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 7
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (9)",
+                    "text": "Use the periodic table to fill in the following information on the liquid element in group 12",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "mercury"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Hg"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 80
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 6
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (10)",
+                    "text": "Use the periodic table to fill in the following information on the element with the IUPAC symbol <b=Br>",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "bromine"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 35
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 17
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (11)",
+                    "text": "Use the periodic table to fill in the following information on the element argon",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ar"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 18
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 18
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (12)",
+                    "text": "Use the periodic table to fill in the following information on the element in group 11 and period 5",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "silver"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ag"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 47
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (13)",
+                    "text": "Use the periodic table to fill in the following information on the element with an atomic number of 19",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "potassium"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "K"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (14)",
+                    "text": "Use the periodic table to fill in the following information on calcium",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ca"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 20
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Group number: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (15)",
+                    "text": "Use the periodic table to fill in the following information on the gas with a group number of 1",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "hydrogen"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "H"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 1 (16)",
+                    "text": "Use the periodic table to fill in the following information on the element with an atomic number of 58",
+                    "solution": "<img=files/chem20/periodic-table/front.png> <br=1>The element name, IUPAC symbol <i=(aka symbol)> and atomic number can be determined by looking at the top right guide and then the elements square. <br=2> The group number can be found by which column it is in (1-18) found at the top. <br=2>The type is found by whether it is to the left of the staircase or not <list=dot=right: non-metal=left: metal><br=2>The state at SATP is found by the boxes color<list=ul=white: Solid=black: Liquid=gray: Gas><br=2>Finally the family is determined by the group (column) of the element:<br=1><img=./files/chem20/periodic-table/families.png>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "cerium"
+                                }
+                            ],
+                            "before-text": "Element name:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ce"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 58
+                                }
+                            ],
+                            "before-text": "Atomic number:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 6
+                                }
+                            ],
+                            "before-text": "Period number: "
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "type: ",
+                            "answers": [
+                                {
+                                    "text": "Metal",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Non-metal",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "State at SATP: ",
+                            "answers": [
+                                {
+                                    "text": "Solid",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Liquid",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Gas",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "Family: ",
+                            "answers": [
+                                {
+                                    "text": "Alkali metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Alkaline earth metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Post-transition metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Metalloids",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Halogens",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Non-metals",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Noble gases",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Lanthanides",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Actinides",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 2 (1)",
+                    "text": "<img=./files/chem20/l1-8-booklet/q2/1.png><br=2>Fill in the energy level diagrams (put 0 if an energy level is empty)",
+                    "files": [
+                        {
+                            "text": "Diagram",
+                            "icon": "fa-solid fa-atom",
+                            "src": "./files/chem20/l1-8-booklet/q2/1.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Energy Level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Energy Level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0
+                                }
+                            ],
+                            "before-text": "Energy Level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "carbon"
+                                }
+                            ],
+                            "before-text": "Element Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "C"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 2 (2)",
+                    "text": "<img=./files/chem20/l1-8-booklet/q2/2.png><br=2>Fill in the energy level diagrams (put 0 if an energy level is empty)",
+                    "files": [
+                        {
+                            "text": "Diagram",
+                            "icon": "fa-solid fa-atom",
+                            "src": "./files/chem20/l1-8-booklet/q2/2.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Energy Level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Energy Level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Energy Level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 13
+                                }
+                            ],
+                            "before-text": "Protons: ",
+                            "after-text": "p<sup=+>"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 2 (3)",
+                    "text": "<img=./files/chem20/l1-8-booklet/q2/3.png><br=2>Fill in the energy level diagrams (put 0 if an energy level is empty)",
+                    "files": [
+                        {
+                            "text": "Diagram",
+                            "icon": "fa-solid fa-atom",
+                            "src": "./files/chem20/l1-8-booklet/q2/3.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "helium"
+                                }
+                            ],
+                            "before-text": "Element Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "He"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 2 (4)",
+                    "text": "<img=./files/chem20/l1-8-booklet/q2/4.png><br=2>Fill in the energy level diagrams (put 0 if an energy level is empty)",
+                    "files": [
+                        {
+                            "text": "Diagram",
+                            "icon": "fa-solid fa-atom",
+                            "src": "./files/chem20/l1-8-booklet/q2/4.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Energy Level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Energy Level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0
+                                }
+                            ],
+                            "before-text": "Energy Level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "neon"
+                                }
+                            ],
+                            "before-text": "Element Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ne"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Booklet 3 (1)",
+                    "text": "Use the periodic table to fill in the following information on Li (neutrons are for the most common isotope)",
+                    "find-tag": "diagram",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 7
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "nuclear-notation"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (2)",
+                    "text": "Use the periodic table to fill in the following information on an element with 8 protons (neutrons are for the most common isotope)",
+                    "find-tag": "diagram",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "nuclear-notation"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (3)",
+                    "text": "Use the periodic table and the provided isotope notation to fill in the following information (neutrons are for the most common isotope) <br=1><img=./files/chem20/l1-8-booklet/q3/3.png>",
+                    "files": [
+                        {
+                            "text": "Isotope Notation",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q3/3.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Fe"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 26
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 26
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 26
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 30
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 56
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (4)",
+                    "text": "Use the periodic table to fill in the following information on an element with 24 electrons (neutrons are for the most common isotope)",
+                    "find-tag": "diagram",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cr"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 24
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 24
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 28
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 52
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "nuclear-notation"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (5)",
+                    "text": "Use the periodic table to fill in the following information on H (neutrons are for the most common isotope)",
+                    "find-tag": "diagram",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "nuclear-notation"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (6)",
+                    "text": "Use the periodic table to fill in the following information on the element with the atomic number 13 (neutrons are for the most common isotope)",
+                    "find-tag": "diagram",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Al"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 13
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 13
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 14
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 27
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "nuclear-notation"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 3 (7)",
+                    "text": "Use the periodic table and the provided isotope notation to fill in the following information (neutrons are for the most common isotope) <br=2><img=./files/chem20/l1-8-booklet/q3/7.png>",
+                    "files": [
+                        {
+                            "text": "Isotope Notation",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q3/7.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "P"
+                                }
+                            ],
+                            "before-text": "IUPAC symbol: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 15
+                                }
+                            ],
+                            "before-text": "Atomic number"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 15
+                                }
+                            ],
+                            "before-text": "Protons",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 15
+                                }
+                            ],
+                            "before-text": "Electrons",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "Neutrons",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 31
+                                }
+                            ],
+                            "before-text": "AVG Atomic mass",
+                            "after-text": "p<sup=+>"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Booklet 8 (1)",
+                    "text": "Complete the energy level diagram below. Be sure to name both the atom and the resulting ion.<br=1><lead=(put 0 if an energy level is empty)><br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2> <img=./files/chem20/l1-8-booklet/q8/1.png>",
+                    "files": [
+                        {
+                            "text": "Energy Level Diagram",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q8/1.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Atom energy level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Atom energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Atom energy level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 12
+                                }
+                            ],
+                            "before-text": "Atom protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 12
+                                }
+                            ],
+                            "before-text": "Atom neutrons: ",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "magnesium"
+                                }
+                            ],
+                            "before-text": "Atom Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mg"
+                                }
+                            ],
+                            "before-text": "Atom IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "magnesium"
+                                }
+                            ],
+                            "before-text": "Ion Name: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Ion charge: ",
+                            "after-text": "+"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 8 (2)",
+                    "text": "Complete the energy level diagram below. Be sure to name both the atom and the resulting ion.<br=1><lead=(put 0 if an energy level is empty)><br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2> <img=./files/chem20/l1-8-booklet/q8/2.png>",
+                    "files": [
+                        {
+                            "text": "Energy Level Diagram",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q8/2.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 5
+                                }
+                            ],
+                            "before-text": "Atom energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0
+                                }
+                            ],
+                            "before-text": "Atom energy level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 7
+                                }
+                            ],
+                            "before-text": "Atom protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "nitrogen"
+                                }
+                            ],
+                            "before-text": "Atom Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N"
+                                }
+                            ],
+                            "before-text": "Atom IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "nitride"
+                                }
+                            ],
+                            "before-text": "Ion Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N3-"
+                                }
+                            ],
+                            "before-text": "Ion IUPAC: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 3
+                                }
+                            ],
+                            "before-text": "Ion charge: ",
+                            "after-text": "-"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 8 (3)",
+                    "text": "Complete the energy level diagram below. Be sure to name both the atom and the resulting ion.<br=1><lead=(put 0 if an energy level is empty)><br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2> <img=./files/chem20/l1-8-booklet/q8/3.png>",
+                    "files": [
+                        {
+                            "text": "Energy Level Diagram",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q8/3.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Atom energy level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 7
+                                }
+                            ],
+                            "before-text": "Atom energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "fluorine"
+                                }
+                            ],
+                            "before-text": "Atom Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "F"
+                                }
+                            ],
+                            "before-text": "Atom IUPAC: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Ion energy level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Ion energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 9
+                                }
+                            ],
+                            "before-text": "Ion protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 10
+                                }
+                            ],
+                            "before-text": "Ion neutrons: ",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "fluoride"
+                                }
+                            ],
+                            "before-text": "Ion Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "F-"
+                                }
+                            ],
+                            "before-text": "Ion IUPAC: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 1
+                                }
+                            ],
+                            "before-text": "Ion charge: ",
+                            "after-text": "-"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 8 (4)",
+                    "text": "Complete the energy level diagram below. Be sure to name both the atom and the resulting ion.<br=1><lead=(put 0 if an energy level is empty)><br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2> <img=./files/chem20/l1-8-booklet/q8/4.png>",
+                    "files": [
+                        {
+                            "text": "Energy Level Diagram",
+                            "icon": "fa-solid fa-image",
+                            "src": "./files/chem20/l1-8-booklet/q8/4.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Atom energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 6
+                                }
+                            ],
+                            "before-text": "Atom energy level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "Atom protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "Atom neutrons: ",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "sulfur"
+                                }
+                            ],
+                            "before-text": "Atom Name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "S"
+                                }
+                            ],
+                            "before-text": "Atom IUPAC: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Ion energy level 1: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Ion energy level 2: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 8
+                                }
+                            ],
+                            "before-text": "Ion energy level 3: ",
+                            "after-text": "e<sup=->"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "Ion protons: ",
+                            "after-text": "p<sup=+>"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ],
+                            "before-text": "Ion neutrons: ",
+                            "after-text": "n<sup=0>"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "sulfide"
+                                }
+                            ],
+                            "before-text": "Ion Name: "
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "Ion charge: ",
+                            "after-text": "-"
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 9 (1)",
+                    "text": "Complete the following table.<br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2><img=./files/chem20/l1-8-booklet/q9/1.png>",
+                    "files": [
+                        {
+                            "text": "Table",
+                            "icon": "fa-solid fa-table",
+                            "src": "./files/chem20/l1-8-booklet/q9/1.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "F"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "+1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "1-"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "F-"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 11
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "-1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "1+"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Na+"
+                                }
+                            ]
+                        },
+
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Al"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 10
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "3+"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Al3+"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 9 (2)",
+                    "text": "Complete the following table.<br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2><img=./files/chem20/l1-8-booklet/q9/2.png>",
+                    "files": [
+                        {
+                            "text": "Table",
+                            "icon": "fa-solid fa-table",
+                            "src": "./files/chem20/l1-8-booklet/q9/2.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Br"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 35
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "+1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "1-"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "+3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "3-"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N3-"
+                                }
+                            ]
+                        },
+
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mg"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 10
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "-2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mg2+"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 9 (3)",
+                    "text": "Complete the following table.<br=1><lead=Example ion IUPAC symbols: F-, O2-, Be2+> <br=2><img=./files/chem20/l1-8-booklet/q9/3.png>",
+                    "files": [
+                        {
+                            "text": "Table",
+                            "icon": "fa-solid fa-table",
+                            "src": "./files/chem20/l1-8-booklet/q9/3.png"
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Li"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "3"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "-1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "1+"
+                                }
+                            ]
+                        },
+                        
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Zn"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "-2"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "2+"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Zn2+"
+                                }
+                            ]
+                        },
+
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 17
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "+1"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl-"
+                                }
+                            ]
+                        }
+                    ]
+                }
+
+            ]
+        }
+    ],
+    "flashcards": [
+        
+    ]
+}

@@ -50,7 +50,7 @@
             <div class="box card mt-3">
                 <div class="row box box-top">
                     <h2 class="row g1"><i class="fa-solid fa-message"></i> Answers</h2>
-                    <button class="e-solution-reveal btn"><i class="fa-solid fa-comment-dots"></i> <span>Solutions</span></button>
+                    <button class="e-solution-reveal btn"><i class="fa-solid fa-comment-dots"></i> <span>Solution</span></button>
                 </div>
                 <div id="input-field" class="column box box-no-border">
                     
@@ -59,46 +59,46 @@
                     <button id="confirm-btn" class="btn disabled"><i class="fa-solid fa-check"></i> <span>Confirm</span></button>
                 </div>
             </div>
+
+            <!-- Overlays -->
+            <div id="success" class="box box-pos-bottom box-success m-2 row g2 hidden">
+                <div class="column flex g1">
+                    <h2><i class="fa-solid fa-flag-checkered"></i> Success!</h2>
+                    <p id="success-answer" fill="answers" class="oneline lead">Answers: 1, 120, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123,</p>
+                </div>
+                <div class="column column-end g1">
+                    <button id="success-next" class="btn"><span>Next</span> <i class="fa-solid fa-arrow-right"></i></button>
+                    <input id="success-next-input" class="input-sm box box-thin" type="number" placeholder="#" maxlength="2">
+                </div>
+            </div>
+
+            <div id="failure" class="box box-pos-bottom box-danger m-2 row g2 hidden">
+                <div class="column column-start flex g1">                
+                    <h2 class="oneline"><i class="fa-solid fa-skull"></i> Failure!</h2>
+                    <p class="lead oneline">Better luck next time!</p>
+                </div>
+                <div>
+                    <button id="failure-try-again" class="btn"><span>Try Again</span><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                </div>
+            </div>
+
+            <div id="solution" class="background box box-right box-pos-right hidden scroll-y">
+                <button id="solution-close" class="btn"><i class="fa-solid fa-arrow-left"></i> <span>close</span></button>
+                <h1 class="mt-2">Solution</h1>
+                <p fill='answers' class="lead mt-1"></p>
+
+                <div id="solution-text" class="mt-2">Loading...</div>
+            </div>
+
             <div class="mt-4 box card">
                 <div class="box box-top">
                     <h2>Files</h2>
                 </div>
-                <div class="box box-no-border column" id="question-resources">
-                    
-                </div>
-            
+                <div class="box box-no-border column" id="question-resources"></div>
             </div>
         </div>
 
-        <!-- Overlays -->
-        <div id="success" class="box box-pos-bottom box-success m-2 row g2 hidden">
-            <div class="column flex g1">
-                <h2><i class="fa-solid fa-flag-checkered"></i> Success!</h2>
-                <p id="success-answer" fill="answers" class="oneline lead">Answers: 1, 120, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123, 123,</p>
-            </div>
-            <div class="column column-end g1">
-                <button id="success-next" class="btn"><span>Next</span> <i class="fa-solid fa-arrow-right"></i></button>
-                <input id="success-next-input" class="input-sm box box-thin" type="number" placeholder="#" maxlength="2">
-            </div>
-        </div>
-
-        <div id="failure" class="box box-pos-bottom box-danger m-2 row g2 hidden">
-            <div class="column column-start flex g1">                
-                <h2 class="oneline"><i class="fa-solid fa-skull"></i> Failure!</h2>
-                <p class="lead oneline">Better luck next time!</p>
-            </div>
-            <div>
-                <button id="failure-try-again" class="btn"><span>Try Again</span><i class="fa-solid fa-arrow-rotate-right"></i></button>
-            </div>
-        </div>
-
-        <div id="solution" class="background box box-right box-pos-right hidden">
-            <button id="solution-close" class="btn"><i class="fa-solid fa-arrow-left"></i> <span>close</span></button>
-            <h1 class="mt-2">Solutions</h1>
-            <p fill='answers' class="lead mt-1"></p>
-
-            <div id="solution-text" class="mt-2">Loading...</div>
-        </div>
+        
 
         <!-- Logic -->
         <script type="module">

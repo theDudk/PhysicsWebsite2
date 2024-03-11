@@ -30,6 +30,12 @@ class FancyStringLoader{
 
             return node;
         },
+        lead: (text) =>{
+            let node = stringToHTML("<span class='lead'>");
+            node.textContent = text;
+
+            return node;
+        },
         img: (src) => {
             let node = stringToHTML("<img class='fs-img'>");
             node.src = src;
@@ -82,9 +88,14 @@ class FancyStringLoader{
 
             return node;
         },
-        br: () => {
-            return document.createElement("br");
+        br: (margin) => {
+            if(margin == "") margin = 0;
+            return stringToHTML("<div style='margin-top: " + (margin / 3) + "em'>");
         },
+        indent: (margin) =>{
+            if(margin == "") margin = 1;
+            return stringToHTML("<span style='margin-left: " + margin + "em'>");
+        }, 
         table: (str) => {
             let data = str.split("=");
 
@@ -92,11 +103,11 @@ class FancyStringLoader{
             let columns = data[1];
             data.splice(0,2);
 
-            let table = document.createElement("table");
+            let table = stringToHTML("<div class='fs-table mt-2'>");
             for(let i = 0; i < rows; i++) {
-                const currRow = document.createElement("tr");
+                const currRow = stringToHTML("<div class='fs-table-row'>");
                 for(let j = 0; j < columns; j++) {
-                    let currData = document.createElement("td");
+                    let currData = stringToHTML("<div class='fs-table-data'>");
                     currData.textContent = data[i * columns + j];
                     currRow.appendChild(currData);
                 }

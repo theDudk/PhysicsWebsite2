@@ -18,6 +18,10 @@ function getInput(inputJson){
             return new MCInput(inputJson);
         case "checklist":
             return new ChecklistInput(inputJson);
+        case "string":
+            return new StringInput(inputJson);
+        case "nuclear-notation":
+            return new NuclearNotation(inputJson);
     }
 
     console.error("failed to find input matching type: " + inputJson.type);
@@ -57,14 +61,14 @@ class NumInput{
 
         if(this.inputJson["before-text"] != undefined) {
             // before text
-            let beforeText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(beforeText, this.inputJson["before-text"]);
             container.appendChild(beforeText);
         }
         container.appendChild(input);
         if(this.inputJson["after-text"] != undefined) {
             // after text
-            let afterText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let afterText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(afterText, this.inputJson["after-text"]);
             container.appendChild(afterText);
         }
@@ -163,7 +167,7 @@ class MCInput{
 
         if(this.inputJson["before-text"] != undefined) {
             // before text
-            let beforeText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(beforeText, this.inputJson["before-text"]);
             container.appendChild(beforeText)
         }
@@ -171,7 +175,7 @@ class MCInput{
         container.appendChild(selectWrapper);
         if(this.inputJson["after-text"] != undefined) {
             // after text
-            let afterText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let afterText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(afterText, this.inputJson["after-text"]);
             container.appendChild(afterText);
         }
@@ -238,7 +242,7 @@ class ChecklistInput{
 
         if(this.inputJson["before-text"] != undefined) {
             // before text
-            let beforeText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(beforeText, this.inputJson["before-text"]);
             container.appendChild(beforeText)
         }
@@ -247,7 +251,7 @@ class ChecklistInput{
         btn.appendChild(items);
         if(this.inputJson["after-text"] != undefined) {
             // after text
-            let afterText = stringToHTML("<span class='px-2 background-accent'></span>");
+            let afterText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
             FancyStringLoader.addHTML(afterText, this.inputJson["after-text"]);
             container.appendChild(afterText);
         }
@@ -322,6 +326,133 @@ class ChecklistInput{
         str = str.substring(0, str.length - 4);
 
         return str;
+    }
+}
+class StringInput{
+    inputJson;
+    /**
+     * @param { object } inputJson - structure for the input
+     */
+    constructor(inputJson) {
+        this.inputJson = inputJson;
+    }
+    /**
+     * @returns { Node } Node object of the input
+     */
+    toHTML() {
+        let container = stringToHTML("<div class='row box box-thin card card-input'>");
+        let input = stringToHTML("<input placeholder='str' type='text'>");
+
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
+            FancyStringLoader.addHTML(beforeText, this.inputJson["before-text"]);
+            container.appendChild(beforeText);
+        }
+        container.appendChild(input);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
+            FancyStringLoader.addHTML(afterText, this.inputJson["after-text"]);
+            container.appendChild(afterText);
+        }
+        container.appendChild(stringToHTML('<span class="check hidden card-item-no-border"><i class="fa-solid fa-circle-check icon-success"></i></span>'));
+
+        this.node = container;
+
+        return container;
+    }
+    /**
+     * Checks if the node is filled out using the objects criteria
+     * @param { Node } node - node representing the input
+     */
+    isFilled() {
+        const inputField = this.node.querySelector("input");
+
+        return inputField.value !== '';
+    }
+    setCompleted(bool) {
+        if(bool) {
+            this.node.querySelector(".check").classList.remove("hidden");
+            return;
+        }
+        this.node.querySelector(".check").classList.add("hidden");
+    }
+    checkAnswer() {
+        const val = standardizeStrInput(this.node.querySelector("input").value);
+        for(let i of this.inputJson.answers) {
+            if(val == standardizeStrInput(i.val)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * @param { Node } node
+     * @param { Answer } answer 
+     */
+    addEventListeners(answer) {
+        this.node.addEventListener("input", function() {
+            answer.updateConfirmBtn();
+        })
+    }
+    toStr() {
+        let str = "";
+        for(let i of this.inputJson.answers) {
+            str += i.val + " or ";
+        }
+        str = str.substring(0, str.length - 4);
+
+        return str;
+    }
+}
+
+// Diagrams (WIP)
+class NuclearNotation{
+    inputJson;
+    /**
+     * @param { object } inputJson - structure for the input
+     */
+    constructor(inputJson) {
+        this.inputJson = inputJson;
+    }
+    /**
+     * @returns { Node } Node object of the input
+     */
+    toHTML() {
+        let container = stringToHTML("<div class='row box box-thin card card-input'>");
+
+        container.appendChild(stringToHTML('<span class="px-2 background-accent nowrap flex"><i class="fa-solid fa-person-digging"></i> Diagrams coming soon</span>'));
+        container.appendChild(stringToHTML('<span class="check hidden card-item-no-border"><i class="fa-solid fa-circle-check icon-success"></i></span>'));
+
+        this.node = container;
+
+        return container;
+    }
+    /**
+     * Checks if the node is filled out using the objects criteria
+     * @param { Node } node - node representing the input
+     */
+    isFilled() {
+        return true;
+    }
+    setCompleted(bool) {
+        if(bool) {
+            this.node.querySelector(".check").classList.remove("hidden");
+            return;
+        }
+        this.node.querySelector(".check").classList.add("hidden");
+    }
+    checkAnswer() {
+        return true;
+    }
+    /**
+     * @param { Node } node
+     * @param { Answer } answer 
+     */
+    addEventListeners(answer) {}
+    toStr() {
+        return "WIP";
     }
 }
 

@@ -4,7 +4,7 @@
 
     --background: #f7f9fe;
     --text: #00214d;
-    --text-light: #9cb0cc;
+    --text-light: #7597c7;
     --accent: #b7d5fd;
 
     --primary: var(--info);
@@ -77,6 +77,11 @@ header > .box{
     background-color: var(--accent);
 }
 
+/* Scrolls */
+.scroll-y{
+    overflow-y: scroll;
+}
+
 /* flexbox styles */
 .row{
     display: flex;
@@ -136,6 +141,9 @@ h3, .h3{
     text-wrap: nowrap;
     overflow: hidden;
     max-width: 100%;
+}
+.nowrap{
+    text-wrap: nowrap;
 }
 
 /* padding and margin */
@@ -467,4 +475,53 @@ select,
 }
 .dropdown-panel > .selected{
     color: var(--text)!important;
+}
+
+/* Progress bars */
+.progress{
+    height: 1.2em;
+    width: 100%;
+    background-color: var(--accent);
+    border: var(--border-weight) solid var(--text);
+    border-radius: var(--border-radius-light);
+    overflow: hidden;
+}
+.progress-bar{
+    height: 100%;
+    background-color: var(--success);
+    box-shadow: var(--border-weight) 0 var(--text);
+}
+
+/* Fancystring */
+.fs-table {
+    font-size: 0.8em;
+    border: var(--border-weight) solid var(--text);
+    border-radius: var(--border-radius-light);
+
+    display: flex;
+    flex-direction: column;
+}
+.fs-table-row{
+    display: flex;
+    flex-direction: row;
+    &:not(:last-child) {
+        border-bottom: var(--border-weight) solid var(--text);
+    }
+}
+.fs-table-data{
+    padding: 0.6em;
+    flex:1;
+    &:not(:last-child) {
+        border-right: var(--border-weight) solid var(--text);
+    }
+}
+
+.fs-img{
+    border: var(--border-weight) solid var(--text);
+    border-radius: var(--border-radius-light);
+}
+
+ul{
+    list-style: disc;
+    padding-left: 1.5em;
 }

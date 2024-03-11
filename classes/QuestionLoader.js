@@ -79,18 +79,36 @@ class QuestionLoader {
         }
         this.answerObj.setRoot(root);
 
-        // Load resources
-        for(let i of questionJson.files) {
-            let tab = stringToHTML("<button class='btn'></button>");
-            let icon = document.createElement("i");
-            icon.setAttribute("class", i.icon);
-            let text = document.createElement("span");
-            text.textContent = i.text;
+        // Load course files
+        if(courseJson.files != undefined) {
+            for(let i of courseJson.files) {
+                let tab = stringToHTML("<button class='btn btn-warning'></button>");
+                let icon = document.createElement("i");
+                icon.setAttribute("class", i.icon);
+                let text = document.createElement("span");
+                text.textContent = i.text;
+    
+                tab.appendChild(icon);
+                tab.appendChild(text);
+                tab.onclick = () => {window.open(i.src, "_blank")};
+                document.getElementById("question-resources").appendChild(tab);
+            }
+        }
 
-            tab.appendChild(icon);
-            tab.appendChild(text);
-            tab.onclick = () => {window.open(i.src, "_blank")};
-            document.getElementById("question-resources").appendChild(tab);
+        // Load question files
+        if(questionJson.files != undefined) {
+            for(let i of questionJson.files) {
+                let tab = stringToHTML("<button class='btn'></button>");
+                let icon = document.createElement("i");
+                icon.setAttribute("class", i.icon);
+                let text = document.createElement("span");
+                text.textContent = i.text;
+    
+                tab.appendChild(icon);
+                tab.appendChild(text);
+                tab.onclick = () => {window.open(i.src, "_blank")};
+                document.getElementById("question-resources").appendChild(tab);
+            }
         }
 
         // update fill elements
