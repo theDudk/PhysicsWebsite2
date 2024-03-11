@@ -2663,15 +2663,6 @@
                             "before-text": "Ion Name: "
                         },
                         {
-                            "type": "string",
-                            "answers": [
-                                {
-                                    "val": "N3-"
-                                }
-                            ],
-                            "before-text": "Ion IUPAC: "
-                        },
-                        {
                             "type": "num",
                             "answers": [
                                 {
