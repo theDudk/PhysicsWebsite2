@@ -14,7 +14,8 @@
     --danger-light: #ff7979;
     --warning: #fde34f;
     --warning-light: #fdefa7;
-    --success: #11b687;
+    --success-dark: #11b687;
+    --success: #5cefc5;
     --success-light: #c8ffee;
     --info: #9aaeff;
     --info-light: #a3c6ff;
@@ -289,6 +290,10 @@ select,
     --background: var(--warning-light);
     --background-hover: var(--warning);
 }
+.btn-success{
+    --background: var(--success-light);
+    --background-hover: var(--success);
+}
 
 /* boxes */
 .box{
@@ -346,7 +351,7 @@ select,
     color: var(--text);
 }
 .box-success .btn{
-    --accent: var(--success);
+    --accent: var(--success-dark);
 }
 
 .box-danger{

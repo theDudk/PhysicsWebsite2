@@ -77,7 +77,7 @@ class UnitLoader {
         
         if(item.completed) {
             container.appendChild(stringToHTML('<i class="fa-solid fa-circle-check"></i>'));
-            container.classList.add("btn-warning");
+            container.classList.add("btn-success");
         } else{
             container.appendChild(stringToHTML('<i class="fa-solid fa-circle-question"></i>'));
         }

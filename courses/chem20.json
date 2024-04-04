@@ -11,8 +11,8 @@
     ],
     "units": [
         {
-            "name": "Science 10 Review",
-            "icon": "fa-solid fa-repeat",
+            "name": "Review of the Periodic Table and Ions",
+            "icon": "fa-solid fa-table",
             "questions": [
                 {
                     "name": "Booklet 1 (1)",
@@ -3263,6 +3263,621 @@
                                     "val": "Cl-"
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Review of Chemical Nomenclature",
+            "icon": "fa-solid fa-signature",
+            "questions": [
+                {
+                    "name": "Booklet 11 (1)",
+                    "text": "Answer the following questions about NaI",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "sodium iodide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Na+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "I-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (2)",
+                    "text": "Answer the following questions about lithium oxide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "sodium iodide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Li+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "NaI"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (3)",
+                    "text": "Answer the following questions about the compound with Zn<sup=2+> and Cl<sup=->",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "zinc chloride"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "ZnCl2"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (4)",
+                    "text": "Answer the following questions about sodium nitride",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Na+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N3-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Na3N"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (5)",
+                    "text": "Answer the following questions about MgCl<sub=2>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "magnesium chloride"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mg2+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (6)",
+                    "text": "Answer the following questions about zinc oxide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Zn2+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "ZnO"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (7)",
+                    "text": "Answer the following questions about the compound with Al<sup=3+> and Br<sup=->",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "aluminium bromide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "AlBr3"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (8)",
+                    "text": "Answer the following questions about silver bromide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ag+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Br-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "AgBr"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (9)",
+                    "text": "Answer the following questions about BaS",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "barium sulfide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ba2+"
+                                }
+                            ],
+                            "before-text": "Cation Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "S2-"
+                                }
+                            ],
+                            "before-text": "Anion Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 11 (10)",
+                    "text": "Answer the following questions about the compound with K<sup=+> and N<sup=3->",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "potassium nitride"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "K3N"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (1)",
+                    "text": "Answer the following questions about copper (II) oxide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cu2+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "CuO"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (2)",
+                    "text": "Answer the following questions about NiCl<sub=3>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "nickel (III) chloride"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ni3+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (3)",
+                    "text": "Answer the following questions about lead (II) nitride",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Pb2+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "N3-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Pb3N2"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (4)",
+                    "text": "Answer the following questions about MnO",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "manganese (II) oxide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Mn2+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (5)",
+                    "text": "Answer the following questions about tin (IV) oxide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Sn4+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "SnO2"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (6)",
+                    "text": "Answer the following questions about Cr<sub=2>O<sub=3>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "chromium (III) oxide"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cr3+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "O2-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (7)",
+                    "text": "Answer the following questions about nickel (II) iodide",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Ni2+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "I-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "NiI2"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (8)",
+                    "text": "Answer the following questions about CuCl<sub=2>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "copper (II) chloride"
+                                }
+                            ],
+                            "before-text": "Compound name: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cu2+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        }
+                    ]
+                },
+                {
+                    "name": "Booklet 12 (9)",
+                    "text": "Answer the following questions about antimony (III) chloride",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Sb3+"
+                                }
+                            ],
+                            "before-text": "Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "Cl-"
+                                }
+                            ],
+                            "before-text": "Non-Metal Ion IUPAC: "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "SbCl3"
+                                }
+                            ],
+                            "before-text": "Chemical Formula: "
                         }
                     ]
                 }
