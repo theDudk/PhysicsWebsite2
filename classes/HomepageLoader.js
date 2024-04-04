@@ -56,7 +56,7 @@ class HomepageLoader{
         let progressBar = stringToHTML('<div class="progress"><div id="' + course.key + '--progress-bar" class="progress-bar"></div></div>')
         let progressPercent = stringToHTML("<p><span id='" + course.key + "--progress-percent'>...</span> complete</p>")
 
-        let button = stringToHTML("<button class='btn'> Continue </button>");
+        let button = stringToHTML("<button class='btn'><i class='fa-solid fa-play'></i> <span>Continue</span></button>");
         button.addEventListener("click", function(){
             window.location.href = getCourseSrc(course.key);
         })

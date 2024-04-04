@@ -152,6 +152,13 @@ class FancyStringLoader{
             spoiler.textContent = text;
 
             return spoiler;
+        },
+        dbox: (text) => {
+            let container = stringToHTML("<div class='box box-danger'></div>");
+            container.appendChild(stringToHTML('<i class="fa-solid fa-triangle-exclamation"></i>'));
+            container.appendChild(document.createTextNode(" " + text));
+
+            return container;
         }
     }
     

@@ -226,8 +226,15 @@ select,
     position: relative;
     border: var(--border-weight) solid var(--text);
     border-radius: var(--border-radius-light);
-    padding: 0.3em 0.6em;
+    padding: 0.35em 0.6em;
     background-color: var(--background);
+
+    &:not(.btn-icon):has(i:first-child){
+        padding-inline-start: 1.6em;
+    }
+    &:not(.btn-icon):has(i:last-child){
+        padding-inline-end: 1.6em;
+    }
 
     transition: background-color 250ms, color 250ms, padding 250ms, box-shadow 250ms, transform 100ms;
 }
@@ -236,20 +243,22 @@ select,
     background-color: var(--background-hover);
     padding-inline: 0.7em;
     box-shadow: 0 var(--shadow-offset) var(--accent);
+    /* Controls the padding if the button has an icon */
     &:not(.btn-icon):has(i:first-child){
-        padding-inline-start: 1.6em;
+        padding-inline-start: 1.8em;
     }
     &:not(.btn-icon):has(i:last-child){
-        padding-inline-end: 1.6em;
+        padding-inline-end: 1.8em;
     }
+    /* controls the icon positions on hover */
     &:not(.btn-icon) > i{
         &:first-child{
-            left: 0.4em;
+            left: 0.5em;
         }
         &:last-child{
-            right: 0.4em;
+            right: 0.5em;
         }
-        opacity: 1;
+        /* opacity: 1; */
         transition: left 250ms, opacity 150ms 50ms;
     }
 }
@@ -259,14 +268,14 @@ select,
     transition: background-color 250ms, padding 200ms, box-shadow 250ms;
 }
 .btn:not(.btn-icon) > i{
+    /* opacity: 0; */
     pointer-events: none;
-    opacity: 0;
     position: absolute;
     &:first-child{
-        left: -0.5em;
+        left: 0.4em;
     }
     &:last-child{
-        right: -0.5em;
+        right: 0.4em;
     }
 
     transition: left 250ms, right 250ms, opacity 150ms;
