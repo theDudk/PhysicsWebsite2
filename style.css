@@ -32,6 +32,9 @@ body{
     background-color: var(--background);
     color: var(--text);
 }
+body:has(#solution:not(.hidden)){
+    overflow: hidden;
+}
 
 ::placeholder{
     color: var(--text-light);
@@ -76,6 +79,10 @@ header > .box{
 }
 .background-accent{
     background-color: var(--accent);
+}
+
+.text-danger{
+    color: var(--danger);
 }
 
 /* Scrolls */

@@ -86,7 +86,17 @@
                                     "val": false
                                 }
                             ]
+                        },
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "1 + 1"
+                                }
+                            ],
+                            "before-text": "Equation:"
                         }
+
                     ]
                 }
             ]

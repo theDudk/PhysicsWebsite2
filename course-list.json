@@ -1,10 +1,10 @@
 [
     {
-        "key": "experiments", 
-        "name": "Experimental Features"
-    },
-    {
         "key": "chem20", 
         "name": "Chemistry 20"
+    },
+    {
+        "key": "experiments", 
+        "name": "Experimental Features"
     }
 ]

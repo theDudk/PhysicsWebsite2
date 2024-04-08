@@ -1,4 +1,4 @@
-import {stringToHTML, toggleClass, getSD, getAllSD} from "./Custom.js";
+import {stringToHTML, toggleClass, getAllSD, prettyPrintEquation} from "./Custom.js";
 import Answer from "./Answer.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 
@@ -20,8 +20,10 @@ function getInput(inputJson){
             return new ChecklistInput(inputJson);
         case "string":
             return new StringInput(inputJson);
+        case "math-equation":
+            return new MathEquationInput(inputJson);
         case "nuclear-notation":
-            return new NuclearNotation(inputJson);
+            return new NuclearNotationInput(inputJson);
     }
 
     console.error("failed to find input matching type: " + inputJson.type);
@@ -407,8 +409,102 @@ class StringInput{
     }
 }
 
+// Equations (WIP)
+class MathEquationInput{
+    inputJson;
+    /**
+     * @param { object } inputJson - structure for the input
+     */
+    constructor(inputJson) {
+        this.inputJson = inputJson;
+    }
+    /**
+     * @returns { Node } Node object of the input
+     */
+    toHTML() {
+        let container = stringToHTML("<div class='row box box-thin card card-input'>");
+        let input = stringToHTML("<input placeholder='str' type='text'>");
+        let fancy = stringToHTML("<span class='px-2 nowrap background'>...</span>");
+
+        if(this.inputJson["before-text"] != undefined) {
+            // before text
+            let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
+            FancyStringLoader.addHTML(beforeText, this.inputJson["before-text"]);
+            container.appendChild(beforeText);
+        }
+        container.appendChild(input);
+        container.appendChild(stringToHTML("<span class='px-2 background-accent nowrap'>result:</span>"));
+        container.appendChild(fancy);
+        if(this.inputJson["after-text"] != undefined) {
+            // after text
+            let afterText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
+            FancyStringLoader.addHTML(afterText, this.inputJson["after-text"]);
+            container.appendChild(afterText);
+        }
+        container.appendChild(stringToHTML('<span class="check hidden card-item-no-border"><i class="fa-solid fa-circle-check icon-success"></i></span>'));
+
+        this.node = container;
+        this.input = input;
+        this.fancy = fancy;
+
+        return container;
+    }
+    /**
+     * Checks if the node is filled out using the objects criteria
+     * @param { Node } node - node representing the input
+     */
+    isFilled() {
+        const inputField = this.node.querySelector("input");
+
+        return inputField.value !== '';
+    }
+    setCompleted(bool) {
+        if(bool) {
+            this.node.querySelector(".check").classList.remove("hidden");
+            return;
+        }
+        this.node.querySelector(".check").classList.add("hidden");
+    }
+    checkAnswer() {
+        // for future improvement consider adding a input mode for checking symbolic equal
+        const val = standardizeStrInput(this.node.querySelector("input").value);
+        for(let i of this.inputJson.answers) {
+            if(val == standardizeStrInput(i.val)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    /**
+     * @param { Node } node
+     * @param { Answer } answer 
+     */
+    addEventListeners(answer) {
+        let fancy = this.fancy;
+        let input = this.input;
+        
+        this.node.addEventListener("input", function() {
+            answer.updateConfirmBtn();
+            if(!prettyPrintEquation(fancy, input.value)){
+                fancy.classList.add("text-danger");
+                return;
+            }
+            fancy.classList.remove("text-danger");
+        })
+    }
+    toStr() {
+        let str = "";
+        for(let i of this.inputJson.answers) {
+            str += i.val + " or ";
+        }
+        str = str.substring(0, str.length - 4);
+
+        return str;
+    }
+}
+
 // Diagrams (WIP)
-class NuclearNotation{
+class NuclearNotationInput{
     inputJson;
     /**
      * @param { object } inputJson - structure for the input

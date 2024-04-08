@@ -140,6 +140,23 @@ function getAllSD(num, sd) {
     ];
 }
 
+// Equation functions
+// idk what this does but the source is: https://mathjs.org/examples/browser/pretty_printing_with_mathjax.html.html
+const mj = (tex) => {
+    return MathJax.tex2svg(tex, {em: 16, ex: 6, display: false});
+}
+const prettyPrintEquation = (object, string)  => {
+    let equationTree;
+    try {
+        equationTree = mj(math.parse(string).toTex({parenthesis: 'keep'}));
+    } catch (error) {
+        return false;
+    }
+    object.innerHTML = '';
+    object.appendChild(equationTree);
+    return true;
+}
+
 // credit: https://pandaquests.medium.com/5-easy-ways-to-check-if-a-string-contains-only-numbers-in-javascript-305db38625e8
 const onlyContainsNumbers = (str) => /^\d+$/.test(str);
 
@@ -164,4 +181,6 @@ export {
     onlyContainsNumbers,
     
     nextQuestion,
+
+    prettyPrintEquation,
 };
