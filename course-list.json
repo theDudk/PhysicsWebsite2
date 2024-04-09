@@ -4,6 +4,10 @@
         "name": "Chemistry 20"
     },
     {
+        "key": "physics20",
+        "name": "Physics 20"
+    },
+    {
         "key": "experiments", 
         "name": "Experimental Features"
     }

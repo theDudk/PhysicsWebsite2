@@ -1,4 +1,4 @@
-import {stringToHTML, toggleClass, getAllSD, prettyPrintEquation} from "./Custom.js";
+import {stringToHTML, toggleClass, getSD, getAllSD, prettyPrintEquation} from "./Custom.js";
 import Answer from "./Answer.js";
 import FancyStringLoader from "./FancyStringLoader.js";
 
@@ -136,6 +136,10 @@ class NumInput{
     toStr() {
         let str = "";
         for(let i of this.inputJson.answers) {
+            if(this.roundingMode = "sci") {
+                str += getSD(i.val, i.sd) + " or ";
+                continue;
+            }
             str += i.val + " or ";
         }
         str = str.substring(0, str.length - 4);

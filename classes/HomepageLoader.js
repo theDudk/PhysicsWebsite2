@@ -92,7 +92,7 @@ class HomepageLoader{
         
         const coursePercent = getCoursePercentage(courseJson);
         progressBar.style.width = coursePercent + "%";
-        progressPercent.textContent = Math.floor(coursePercent) + "%";
+        progressPercent.textContent = (Math.floor(coursePercent * 10) / 10) + "%";
     }
 }
 

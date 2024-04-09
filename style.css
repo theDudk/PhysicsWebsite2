@@ -31,6 +31,7 @@
 body{
     background-color: var(--background);
     color: var(--text);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 body:has(#solution:not(.hidden)){
     overflow: hidden;
@@ -237,10 +238,10 @@ select,
     background-color: var(--background);
 
     &:not(.btn-icon):has(i:first-child){
-        padding-inline-start: 1.6em;
+        padding-inline-start: 1.7em;
     }
     &:not(.btn-icon):has(i:last-child){
-        padding-inline-end: 1.6em;
+        padding-inline-end: 1.7em;
     }
 
     transition: background-color 250ms, color 250ms, padding 250ms, box-shadow 250ms, transform 100ms;
@@ -252,10 +253,10 @@ select,
     box-shadow: 0 var(--shadow-offset) var(--accent);
     /* Controls the padding if the button has an icon */
     &:not(.btn-icon):has(i:first-child){
-        padding-inline-start: 1.8em;
+        padding-inline-start: 1.9em;
     }
     &:not(.btn-icon):has(i:last-child){
-        padding-inline-end: 1.8em;
+        padding-inline-end: 1.9em;
     }
     /* controls the icon positions on hover */
     &:not(.btn-icon) > i{

@@ -123,7 +123,7 @@ class QuestionLoader {
         if(questionJson.solution != null) {
             FancyStringLoader.addHTML(document.getElementById("solution-text"), questionJson.solution);
         } else {
-            FancyStringLoader.addHTML(document.getElementById("solution-text"), "<dbox=Whoops! There doesn't seem to be a solution for this question.>");
+            FancyStringLoader.addHTML(document.getElementById("solution-text"), "<dbox=Whoops! There doesn't seem to be a detailed solution for this question.>");
         }
 
         this.loadEventListeners();
