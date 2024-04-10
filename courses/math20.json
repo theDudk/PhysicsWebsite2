@@ -749,7 +749,7 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "-(x-2)^2-3"
+                                    "val": "y=-(x-2)^2-3"
                                 }
                             ]
                         }
@@ -763,7 +763,7 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "3(x-1)^2+2"
+                                    "val": "y=3(x-1)^2+2"
                                 }
                             ]
                         }
