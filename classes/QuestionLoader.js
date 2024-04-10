@@ -79,6 +79,8 @@ class QuestionLoader {
         }
         this.answerObj.setRoot(root);
 
+        this.answerObj.updateConfirmBtn(); // update confirm button incase all inputs are filled by default
+
         // Load course files
         if(courseJson.files != undefined) {
             for(let i of courseJson.files) {

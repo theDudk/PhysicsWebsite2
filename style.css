@@ -45,6 +45,10 @@ body:has(#solution:not(.hidden)){
 .dropdown-panel:has(:focus){
     outline: 0.2em solid var(--danger);
 }
+::selection{
+    color: var(--background);
+    background-color: var(--text);
+}
 
 /* page elements */
 header{
@@ -541,6 +545,11 @@ select,
 .fs-img{
     border: var(--border-weight) solid var(--text);
     border-radius: var(--border-radius-light);
+}
+span.fs-equation{
+    vertical-align: text-bottom;
+    width: fit-content;
+    display: inline-block;
 }
 
 ul{

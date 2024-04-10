@@ -349,6 +349,10 @@ class StringInput{
         let container = stringToHTML("<div class='row box box-thin card card-input'>");
         let input = stringToHTML("<input placeholder='str' type='text'>");
 
+        if(this.inputJson["placeholder"] != undefined) {
+            input.setAttribute("placeholder", this.inputJson["placeholder"]);
+        }
+
         if(this.inputJson["before-text"] != undefined) {
             // before text
             let beforeText = stringToHTML("<span class='px-2 background-accent nowrap'></span>");
@@ -427,7 +431,7 @@ class MathEquationInput{
      */
     toHTML() {
         let container = stringToHTML("<div class='row box box-thin card card-input'>");
-        let input = stringToHTML("<input placeholder='str' type='text'>");
+        let input = stringToHTML("<input placeholder='equation' type='text'>");
         let fancy = stringToHTML("<span class='px-2 nowrap background'>...</span>");
 
         if(this.inputJson["before-text"] != undefined) {

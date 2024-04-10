@@ -11,7 +11,7 @@
     ],
     "units": [
         {
-            "name": "Review of the Periodic Table and Ions",
+            "name": "Atomic Theory",
             "icon": "fa-solid fa-table",
             "questions": [
                 {
@@ -3269,7 +3269,7 @@
             ]
         },
         {
-            "name": "Review of Chemical Nomenclature",
+            "name": "Chemical Nomenclature",
             "icon": "fa-solid fa-signature",
             "questions": [
                 {

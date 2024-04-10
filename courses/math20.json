@@ -1,0 +1,832 @@
+{
+    "key": "math20",
+    "name": "Math 20",
+    "icon": "fa-solid fa-square-plus",
+    "files": [
+        {
+            "text": "Desmos Graphing Calculator",
+            "icon": "fa-solid fa-chart-line",
+            "src": "https://www.desmos.com/calculator"
+        }
+    ],
+    "units": [
+        {
+            "name": "Quadratic Functions",
+            "icon": "fa-solid fa-chart-line",
+            "questions": [
+                {
+                    "name": "Review 1 (1)",
+                    "text": "Provide the following information about the equation: <br=2><equation=y=-1/2(x-3)^2+2><br=2><lead=use format (min, max) for domain and range><br=1><lead=use -inf and inf to represent infinity>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, 2]"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "3"
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(3, 2)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "min",
+                                    "val": false
+                                },
+                                {
+                                    "text": "max",
+                                    "val": true
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(3, 2)"
+                                }
+                            ],
+                            "before-text": "max/min point:"
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 1 (2)",
+                    "text": "Provide the following information about the equation: <br=2><equation=y=-1/2(x-3)^2+2><br=2><lead=use format (min, max) for domain and range><br=1><lead=use -inf and inf to represent infinity>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "[-3.1, inf)"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "1.2"
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(1.2, -3.1)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "min",
+                                    "val": true
+                                },
+                                {
+                                    "text": "max",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(12, -3.1)"
+                                }
+                            ],
+                            "before-text": "max/min point:"
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 2 (1)",
+                    "text": "Write the equation of the quadratic function that has vertex (4 , -3) and passes through (6 , 1)",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=(x-4)^2-3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 2 (2)",
+                    "text": "Write the equation of the quadratic function that has range y ≤ 8 and has x intercepts -2 and 4",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=-8/9(x-1)^2+8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 2 (3)",
+                    "text": "Write the equation of the quadratic function that has range y ≥ -5 an axis of symmetry of x = 1 and has a y-intercept of -1",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=4(x-1)^2-5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 2 (4)",
+                    "text": "Write the equation of the quadratic function that has x intercepts at -1 and 9 and passes through the point (-6 , -45)",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=-3/5(x+1)(x-9)"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 2 (5)",
+                    "text": "Write the equation of the quadratic function that passes through the points (-2 , 1) ,(8 , 1) ,(13 , 16)",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=1/5(x-3)^2-4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 3 (1)",
+                    "text": "Complete the square:<br=1><equation=y=-3x^2+6x-8>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=-3(x-1)^2-5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 3 (2)",
+                    "text": "Complete the square:<br=1><equation=y=1/2x^2-4x+3>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=1/2(x-4)^2-5"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 3 (3)",
+                    "text": "Complete the square:<br=1><equation=-0.1x^2-0.5x-4>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=-1/10(x+5/2)^2-27/8"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 4",
+                    "text": "A farmer estimates that if he harvests his potatoes now, he will have 180 bushels at $1.00 per bushel, but if he waits, the crop will increase by 30 bushels per week while the price will drop 10 cents per bushel per week. When should he harvest for the maximum cash return?",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "The farmer should sell after",
+                            "after-text": "weeks"
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 5",
+                    "text": "Sixty meters of fencing are to be used to enclose a rectangular field and divide it into two parts with a fence parallel to two of the sides. Find the maximum area that can be enclosed.",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 150
+                                }
+                            ],
+                            "before-text": "The maximum area is",
+                            "after-text": "m<sup=2>"
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 6",
+                    "text": "A set of fenced in areas, as shown in the diagram is being planned on an open field. A total of 900m of fencing is available. What measurement will maximize the overall area of the entire enclosure?<br=1><img=files/math20/quadratic-functions-review/q6.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 150
+                                }
+                            ],
+                            "before-text": "x dimension: ",
+                            "after-text": "m"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 150
+                                }
+                            ],
+                            "before-text": "y dimension: ",
+                            "after-text": "m"
+                        }
+                    ]
+                },
+                {
+                    "name": "Review 7",
+                    "text": "A 50 cm wire is cut so that part of the wire is bent into a square and the other part of the wire is bent into a rectangle where the width is three times the length. Where should the wire be cut so that the combined area of the square and the rectangle is maximized?",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "150/7"
+                                }
+                            ],
+                            "before-text": "smaller piece: ",
+                            "after-text": "cm"
+                        },
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "200/7"
+                                }
+                            ],
+                            "before-text": "larger piece: ",
+                            "after-text": "cm"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "TextBook Review 1",
+                    "text": "Match the following characteristics with the correct quadratic function:<br=1>a: <equation=y=-5(x-2)^2-3><br=1>b: <equation=y=3(x+3)^2+5><br=1>c: <equation=y=2(x+2)^2-3><br=1>d: <equation=y=3(x-3)^2-5>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "a",
+                                    "val": false
+                                },
+                                {
+                                    "text": "b",
+                                    "val": false
+                                },
+                                {
+                                    "text": "c",
+                                    "val": true
+                                },
+                                {
+                                    "text": "d",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "vertex in quadrant III"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "a",
+                                    "val": true
+                                },
+                                {
+                                    "text": "b",
+                                    "val": false
+                                },
+                                {
+                                    "text": "c",
+                                    "val": false
+                                },
+                                {
+                                    "text": "d",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "opens downward"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "a",
+                                    "val": false
+                                },
+                                {
+                                    "text": "b",
+                                    "val": false
+                                },
+                                {
+                                    "text": "c",
+                                    "val": false
+                                },
+                                {
+                                    "text": "d",
+                                    "val": true
+                                }
+                            ],
+                            "before-text": "axis of symmetry: x = 3"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "a",
+                                    "val": false
+                                },
+                                {
+                                    "text": "b",
+                                    "val": true
+                                },
+                                {
+                                    "text": "c",
+                                    "val": false
+                                },
+                                {
+                                    "text": "d",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "range: {y | y ≥ 5, y <s=el-of> R}"
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 2",
+                    "text": "Classify the function as a quadratic function or a function that is not quadratic.<br=1>a: <equation=y=(x+6)-1><br=1>b: <equation=y=-5(x+1)^2><br=1>c: <equation=y=sqrt((x+2)^2)+7><br=1>d: <equation=y=x^2-8>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "Quadratic",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Not Quadratic",
+                                    "val": true
+                                }
+                            ],
+                            "before-text": "a"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "Quadratic",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Not Quadratic",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "b"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "Quadratic",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Not Quadratic",
+                                    "val": true
+                                }
+                            ],
+                            "before-text": "c"
+                        },
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "Quadratic",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Not Quadratic",
+                                    "val": false
+                                }
+                            ],
+                            "before-text": "d"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "TextBook Review 4 (1)",
+                    "text": "Identify the vertex, domain, range, axis of symmetry, x-intercepts, and y-intercept for the following quadratic function:<br=1><equation=f(x)=(x+4)^2-3> <br=1><lead=(give intercepts from smallest to greatest)><br=1><lead=(use -inf and inf to represent infinity)>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-4, -3)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "[-3, inf)"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": -4
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-5.7, 0), (-2.3, 0)"
+                                }
+                            ],
+                            "placeholder": "ex. (-1, 0), (1, 0)",
+                            "before-text": "x-intercept(s):"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(0, 13)"
+                                }
+                            ],
+                            "placeholder": "ex. (0, -1), (0, 1)",
+                            "before-text": "y-intercept(s):"
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 4 (2)",
+                    "text": "Identify the vertex, domain, range, axis of symmetry, x-intercepts, and y-intercept for the following quadratic function:<br=1><equation=f(x) = -(x- 2)^2+1> <br=1><lead=(give intercepts from smallest to greatest)><br=1><lead=(use -inf and inf to represent infinity)>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(2, 1)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, 1]"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(1,0), (3,0)"
+                                }
+                            ],
+                            "placeholder": "ex. (-1, 0), (1, 0)",
+                            "before-text": "x-intercept(s):"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(0, -3)"
+                                }
+                            ],
+                            "placeholder": "ex. (0, -1), (0, 1)",
+                            "before-text": "y-intercept(s):"
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 4 (3)",
+                    "text": "Identify the vertex, domain, range, axis of symmetry, x-intercepts, and y-intercept for the following quadratic function:<br=1><equation=f(x)=-2x^2-6> <br=1><lead=(give intercepts from smallest to greatest)><br=1><lead=(use -inf and inf to represent infinity)>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(0, -6)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, -6]"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(0, -6)"
+                                }
+                            ],
+                            "placeholder": "ex. (0, -1), (0, 1)",
+                            "before-text": "y-intercept(s):"
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 4 (4)",
+                    "text": "Identify the vertex, domain, range, axis of symmetry, x-intercepts, and y-intercept for the following quadratic function:<br=1><equation=f(x)=1/2(x+8)^2+6> <br=1><lead=(give intercepts from smallest to greatest)><br=1><lead=(use -inf and inf to represent infinity)>",
+                    "inputs": [
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-8, 6)"
+                                }
+                            ],
+                            "before-text": "Vertex:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(-inf, inf)"
+                                }
+                            ],
+                            "before-text": "Domain:"
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "[6, inf)"
+                                }
+                            ],
+                            "before-text": "Range:"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": -8
+                                }
+                            ],
+                            "before-text": "AOS: x = "
+                        },
+                        {
+                            "type": "string",
+                            "answers": [
+                                {
+                                    "val": "(0, 38)"
+                                }
+                            ],
+                            "placeholder": "ex. (0, -1), (0, 1)",
+                            "before-text": "y-intercept(s):"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "TextBook Review 5 (1)",
+                    "text": "Rewrite the following function in the form <equation=y = a(x - p)^2 + q>.<br=1><equation=y=x^2-10x+18>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=(x-5)^2-7"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 5 (2)",
+                    "text": "Rewrite the following function in the form <equation=y = a(x - p)^2 + q>.<br=1><equation=y=-x^2+4x-7>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "-(x-2)^2-3"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 5 (3)",
+                    "text": "Rewrite the following function in the form <equation=y = a(x - p)^2 + q>.<br=1><equation=3x^2-6x+5>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "3(x-1)^2+2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 5 (4)",
+                    "text": "Rewrite the following function in the form <equation=y = a(x - p)^2 + q>.<br=1><equation=1/4x^2+4x+20>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "y=1/4(x+8)^2+4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "TextBook Review 6",
+                    "text": "The approximate height, h, in metres, of an arrow shot into the air with an initial velocity of 20 m/s after t seconds can be modelled by the function <equation=h(t) = -5t^2 + 20t + 2>. What is the maximum height reached by the arrow? From what height was the arrow shot? How long did it take for the arrow to hit the ground, to the nearest second?",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 22
+                                }
+                            ],
+                            "after-text": "m"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 2
+                                }
+                            ],
+                            "after-text": "m"
+                        },
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ],
+                            "after-text": "s"
+                        }
+                    ]
+                }
+
+            ]
+        },
+        {
+            "name": "Quadratic Equations",
+            "icon": "fa-solid fa-calculator",
+            "questions": [
+
+
+            ]
+        }
+    ],
+    "flashcards": []
+}

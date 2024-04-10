@@ -17,7 +17,7 @@ html {
 /* reset body line-height */
 body {
   min-height: 100vh;
-  line-height: 1;
+  line-height: 1.1;
   text-rendering: optimizeSpeed;
 }
 

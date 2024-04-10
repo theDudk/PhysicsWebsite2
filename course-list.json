@@ -1,5 +1,9 @@
 [
     {
+        "key": "math20", 
+        "name": "Math 20"
+    },
+    {
         "key": "chem20", 
         "name": "Chemistry 20"
     },

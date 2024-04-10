@@ -1,4 +1,4 @@
-import { stringToHTML, getIndicesOf } from "./Custom.js";
+import { stringToHTML, prettyPrintEquation } from "./Custom.js";
 
 class FancyStringLoader{
     constructor() {
@@ -43,16 +43,12 @@ class FancyStringLoader{
             return node;
         },
         s: (type) => {
-            let node = stringToHTML("<span>");
             switch(type){
-                case "delta":
-                    node.textContent = "Δ";
-                    break;
-                case "l-delta":
-                    node.textContent = "δ";
-                    break;
+                case "el-of":
+                    return document.createTextNode("∈");
             }
-            return node;
+            console.error("Invalid symbol id: " + type);
+            return document.createTextNode("");
         },
         c: (text) => {
             let node = stringToHTML("<span>");
@@ -157,6 +153,12 @@ class FancyStringLoader{
             let container = stringToHTML("<div class='box box-danger'></div>");
             container.appendChild(stringToHTML('<i class="fa-solid fa-triangle-exclamation"></i>'));
             container.appendChild(document.createTextNode(" " + text));
+
+            return container;
+        },
+        equation: (text) => {
+            let container = stringToHTML("<span class='fs-equation'></span>");
+            prettyPrintEquation(container, text);
 
             return container;
         }
