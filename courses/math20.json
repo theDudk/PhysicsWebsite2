@@ -152,9 +152,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=(x-4)^2-3"
+                                    "val": "(x-4)^2-3"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -166,9 +167,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-8/9(x-1)^2+8"
+                                    "val": "-8/9(x-1)^2+8"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -180,9 +182,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=4(x-1)^2-5"
+                                    "val": "4(x-1)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -208,9 +211,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/5(x-3)^2-4"
+                                    "val": "1/5(x-3)^2-4"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -222,9 +226,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-3(x-1)^2-5"
+                                    "val": "-3(x-1)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -236,9 +241,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/2(x-4)^2-5"
+                                    "val": "1/2(x-4)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -250,9 +256,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-1/10(x+5/2)^2-27/8"
+                                    "val": "-1/10(x+5/2)^2-27/8"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -735,9 +742,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=(x-5)^2-7"
+                                    "val": "(x-5)^2-7"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -749,9 +757,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-(x-2)^2-3"
+                                    "val": "-(x-2)^2-3"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -763,9 +772,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=3(x-1)^2+2"
+                                    "val": "3(x-1)^2+2"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -777,9 +787,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/4(x+8)^2+4"
+                                    "val": "1/4(x+8)^2+4"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -813,6 +824,103 @@
                                 }
                             ],
                             "after-text": "s"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Assignment 1",
+                    "text": "The quadratic function <equation=y=−2x^2 + q> has a vertex of",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "(-2,q)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(0,q)",
+                                    "val": true
+                                },
+                                {
+                                    "text": "(1,0)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(q,-2)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 2",
+                    "text": "How many x-intercepts does a quadratic function have if the range of the quadratic is (-∞,9] and the domain is (−∞ ,∞)?",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "0",
+                                    "val": false
+                                },
+                                {
+                                    "text": "1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2",
+                                    "val": true
+                                },
+                                {
+                                    "text": "3",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 3",
+                    "text": "The graph of the quadratic function <equation=f(x)=(x-p)^2 + q> is shown. What is true about the function <equation=g(x)=-(x-p)^2+q>?<br=2><img=files/math20/assignment/4.png>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "y = g(x) has the same vertex and range as y = f(x)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "y = g(x) has the same vertex as y = f(x) but the range of y=g (x) is (-inf, p]",
+                                    "val": false
+                                },
+                                {
+                                    "text": "y = g(x) has the same vertex as y = f(x) but the range of y=g (x) is (-inf, q]",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Both the vertex and the range of y = g(x) is different than that of y = f(x)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 4",
+                    "text": "A rectangle has a width of <equation=2 - x> and a length of <equation=4x>. The maximum area of this rectangle must be:",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "4"
+                                }
+                            ],
+                            "after-text": "units<sup=2>"
                         }
                     ]
                 }
