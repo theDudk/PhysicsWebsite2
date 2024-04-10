@@ -240,6 +240,8 @@ select,
     border-radius: var(--border-radius-light);
     padding: 0.35em 0.6em;
     background-color: var(--background);
+    display: flex;
+    align-items: center;
 
     &:not(.btn-icon):has(i:first-child){
         padding-inline-start: 1.7em;
