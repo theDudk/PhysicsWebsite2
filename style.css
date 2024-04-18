@@ -89,6 +89,9 @@ header > .box{
 .text-danger{
     color: var(--danger);
 }
+.text-link{
+    text-decoration: underline;
+}
 
 /* Scrolls */
 .scroll-y{
@@ -331,6 +334,12 @@ select,
 .box-no-border, 
 .box-end{
     box-shadow: none;
+}
+
+.box-info{
+    background-color: var(--info-light);
+    margin: 1em;
+    margin-bottom: 0;
 }
 
 /* box types */
