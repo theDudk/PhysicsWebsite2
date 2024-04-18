@@ -152,9 +152,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=(x-4)^2-3"
+                                    "val": "(x-4)^2-3"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -166,9 +167,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-8/9(x-1)^2+8"
+                                    "val": "-8/9(x-1)^2+8"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -180,9 +182,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=4(x-1)^2-5"
+                                    "val": "4(x-1)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -208,9 +211,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/5(x-3)^2-4"
+                                    "val": "1/5(x-3)^2-4"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -222,9 +226,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-3(x-1)^2-5"
+                                    "val": "-3(x-1)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -236,9 +241,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/2(x-4)^2-5"
+                                    "val": "1/2(x-4)^2-5"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -250,9 +256,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-1/10(x+5/2)^2-27/8"
+                                    "val": "-1/10(x+5/2)^2-27/8"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -735,9 +742,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=(x-5)^2-7"
+                                    "val": "(x-5)^2-7"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -749,9 +757,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=-(x-2)^2-3"
+                                    "val": "-(x-2)^2-3"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -763,9 +772,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=3(x-1)^2+2"
+                                    "val": "3(x-1)^2+2"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -777,9 +787,10 @@
                             "type": "math-equation",
                             "answers": [
                                 {
-                                    "val": "y=1/4(x+8)^2+4"
+                                    "val": "1/4(x+8)^2+4"
                                 }
-                            ]
+                            ],
+                            "before-text": "y = "
                         }
                     ]
                 },
@@ -813,6 +824,614 @@
                                 }
                             ],
                             "after-text": "s"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Assignment 1",
+                    "text": "The quadratic function <equation=y=−2x^2 + q> has a vertex of",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "(-2,q)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(0,q)",
+                                    "val": true
+                                },
+                                {
+                                    "text": "(1,0)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(q,-2)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 2",
+                    "text": "How many x-intercepts does a quadratic function have if the range of the quadratic is (-∞,9] and the domain is (−∞ ,∞)?",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "0",
+                                    "val": false
+                                },
+                                {
+                                    "text": "1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2",
+                                    "val": true
+                                },
+                                {
+                                    "text": "3",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 3",
+                    "text": "The graph of the quadratic function <equation=f(x)=(x-p)^2 + q> is shown. What is true about the function <equation=g(x)=-(x-p)^2+q>?<br=2><img=files/math20/assignment/4.png>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "y = g(x) has the same vertex and range as y = f(x)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "y = g(x) has the same vertex as y = f(x) but the range of y=g (x) is (-inf, p]",
+                                    "val": false
+                                },
+                                {
+                                    "text": "y = g(x) has the same vertex as y = f(x) but the range of y=g (x) is (-inf, q]",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Both the vertex and the range of y = g(x) is different than that of y = f(x)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 4",
+                    "text": "A rectangle has a width of <equation=2 - x> and a length of <equation=4x>. The maximum area of this rectangle must be:",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "4"
+                                }
+                            ],
+                            "after-text": "units<sup=2>"
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 5",
+                    "text": "A quadratic function with y-intercept at (0, 20) has a minimum value of 2 when <equation=x=-3>. When written in the form <equation=y=a(x-p)^2+q> the value of a must be:",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": "2"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 6",
+                    "text": "Three functions, all of the form <equation=y=ax^2> are shown. When the functions are listed in order from their largest to smallest values of a the order would be:<br=2><img=files/math20/assignment/6.png>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "o(x), n(x), m(x)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "m(x), o(x), n(x)",
+                                    "val": true
+                                },
+                                {
+                                    "text": "m(x), n(x), o(x)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "n(x), i(X), m(x)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 7",
+                    "text": "A quadratic function has x-intercepts of <equation=-4/3> and <equation=2/3>. One of the factors of this function must be:",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "3x-4",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2x-3",
+                                    "val": false
+                                },
+                                {
+                                    "text": "3x-2",
+                                    "val": true
+                                },
+                                {
+                                    "text": "4x-3",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 8",
+                    "text": "What is the y-intercept of the quadratic function?<img=files/math20/assignment/8.png>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "(0, 25)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(0, 31)",
+                                    "val": true
+                                },
+                                {
+                                    "text": "(0, 35)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(0, 41)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 9",
+                    "text": "The quadratic function <equation=y=k(x-3)^2+m> would have its vertex at:",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "(3, m)",
+                                    "val": true
+                                },
+                                {
+                                    "text": "(-3, m)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(3, k)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "(-3, k)",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 10",
+                    "text": "A quadratic function is given by the equation <equation=f(x)=-(x-k)^2-m>. Which of the following is true?",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "The function has a minimum at (-k ,-m)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "The function has a maximum at (-k ,-m)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "The function has a minimum at (k ,m)",
+                                    "val": false
+                                },
+                                {
+                                    "text": "The function has a maximum at (k ,m)",
+                                    "val": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 11",
+                    "text": "The graph of <equation=y=f(x)> is shown. If <equation=g(x)> is a reflection of <equation=y=f(x)> about (across) the x-axis, the equation of <equation=g(x)> is: <img=files/math20/assignment/11.png>",
+                    "inputs": [
+                        {
+                            "type": "math-equation",
+                            "answers": [
+                                {
+                                    "val": "(x+4)^2-3"
+                                }
+                            ],
+                            "before-text": "g(x) = "
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 12",
+                    "text": "The quadratic function shown is written in the form <equation=y=a(x-p)^2+q>. What is the value of a <br=1><lead=(give your answer as a decimal to the nearest tenth)><br=1><img=files/math20/assignment/12.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": -0.4
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 13",
+                    "text": "The graph of <equation=y=a(x-p)^2+q> has no x-intercepts. Which of the following could be true?",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "a<0, q>0",
+                                    "val": false
+                                },
+                                {
+                                    "text": "a>0, q<0",
+                                    "val": false
+                                },
+                                {
+                                    "text": "a<0, q=0",
+                                    "val": true
+                                },
+                                {
+                                    "text": "a<0, q<0",
+                                    "val": true
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 14",
+                    "text": "A quadratic function is written in factored form as <equation=y=-2(x-m)(x+3)>. If the y intercept is 24 then what is the value of m",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "m = ",
+                            "answers": [
+                                {
+                                    "val": 4
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 15",
+                    "text": "When the function <equation=y=x^2-6x+8> is written in the form <equation=y=a(x-p)^2+q> then the value of q = ___",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "q = ",
+                            "answers": [
+                                {
+                                    "val": -1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 16",
+                    "text": "When the function <equation=y=5x^2+20x+17> is written in the form <equation=y=a(x-p)^2+q> then p=___",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "p = ",
+                            "answers": [
+                                {
+                                    "val": -2
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 17",
+                    "text": "Two functions are shown. Both functions have an axis of symmetry of <equation=x=-2> and can be described generally by the quadratic function <equation=y=a(x-p)^2+q>. For the parameters of a, p and q, the functions must:<br=2><img=files/math20/assignment/17.png>",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "Have none of a, p, or q in common.",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Have exactly one of a, p, or q in common.",
+                                    "val": false
+                                },
+                                {
+                                    "text": "Have exactly two of a, p, or q in common.",
+                                    "val": true
+                                },
+                                {
+                                    "text": "Have all three of a, p, or q in common.",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 18",
+                    "text": "When the quadratic function below is written in the form <equation=y=a(x-m)(x-n)> the value of <equation=m*n> is ____<br=2><img=files/math20/assignment/18-20.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "m * n = ",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 19",
+                    "text": "When the quadratic function below is written in the form <equation=y=a(x-p)^2+q> the value of a is ____<br=2><img=files/math20/assignment/18-20.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "a = ",
+                            "answers": [
+                                {
+                                    "val": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 20",
+                    "text": "When the quadratic function below is written in the form <equation=y=ax^2+bx+c> the value of c is ____<br=2><img=files/math20/assignment/18-20.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "c = ",
+                            "answers": [
+                                {
+                                    "val": -48
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 21",
+                    "text": "The diagram shows a rectangle inscribed in a right angled triangle with a hypotenuse given by the equation of the line <equation=y=-2x+6>. And the other sides are bounded by the x and y axis. The size of this rectangle changes as the point on the line moves. The maximum area of the rectangle is ______ square units (nearest tenth)<br=2><img=files/math20/assignment/21.png>",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "after-text": "units<sup=2>",
+                            "answers": [
+                                {
+                                    "val": 4.5
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 22",
+                    "text": "A quadratic function has zeros of <equation=-1/3> and <equation=3/4>. The quadratic is written in the form <equation=y=12x^2+bx+c>. The value of b=___ and the value of c=___",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "b = ",
+                            "answers": [
+                                {
+                                    "val": -5
+                                }
+                            ]
+                        },
+                        {
+                            "type": "num",
+                            "before-text": "c = ",
+                            "answers": [
+                                {
+                                    "val": -3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 23",
+                    "text": "The graph of <equation=f(x)=a(x+4)^2+q> holds the property that q=2, a≠0. Which of the following must be true?",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "answers": [
+                                {
+                                    "text": "f(x) has two x intercepts",
+                                    "val": false
+                                },
+                                {
+                                    "text": "f(x) has one x intercept",
+                                    "val": false
+                                },
+                                {
+                                    "text": "f(x) has no x intercepts",
+                                    "val": true
+                                },
+                                {
+                                    "text": "f (x) could have at least one, but no more than two x intercepts",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 24",
+                    "text": "When <equation=y=3x^2+18x+43> is written in the form <equation=y=3(x+3)^2+k>, the value of k must be:",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "before-text": "k = ",
+                            "answers": [
+                                {
+                                    "val": 16
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 25",
+                    "text": "A student is examining four functions, illustrated in the chart shown below. Each one is missing at least one parameter.<br=2><img=files/math20/assignment/25.png><br=2>a: The function that must have its minimum on the x axis is #___<br=2>b: The function that has a negative y intercept is #___<br=2>c: The function that has its vertex in the second quadrant is #___<br=2>d: The function whose range is restricted by a minimum positive value, zero not included, is #___",
+                    "inputs": [
+                        {
+                            "type": "mc",
+                            "before-text": "a: ",
+                            "answers": [
+                                {
+                                    "text": "1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2",
+                                    "val": true
+                                },
+                                {
+                                    "text": "3",
+                                    "val": false
+                                },
+                                {
+                                    "text": "4",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "b: ",
+                            "answers": [
+                                {
+                                    "text": "1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "3",
+                                    "val": false
+                                },
+                                {
+                                    "text": "4",
+                                    "val": true
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "c: ",
+                            "answers": [
+                                {
+                                    "text": "1",
+                                    "val": true
+                                },
+                                {
+                                    "text": "2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "3",
+                                    "val": false
+                                },
+                                {
+                                    "text": "4",
+                                    "val": false
+                                }
+                            ]
+                        },
+                        {
+                            "type": "mc",
+                            "before-text": "d: ",
+                            "answers": [
+                                {
+                                    "text": "1",
+                                    "val": false
+                                },
+                                {
+                                    "text": "2",
+                                    "val": false
+                                },
+                                {
+                                    "text": "3",
+                                    "val": true
+                                },
+                                {
+                                    "text": "4",
+                                    "val": false
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "Assignment 26",
+                    "text": "Correct to the nearest hundredth, the largest zero of the function <equation=y=6x^2+19x-24> is:",
+                    "inputs": [
+                        {
+                            "type": "num",
+                            "answers": [
+                                {
+                                    "val": 0.17
+                                }
+                            ]
                         }
                     ]
                 }

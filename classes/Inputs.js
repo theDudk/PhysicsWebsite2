@@ -55,7 +55,7 @@ class NumInput{
      */
     toHTML() {
         let container = stringToHTML("<div class='row box box-thin card card-input'>");
-        let input = stringToHTML("<input placeholder='#' type='tel'>");
+        let input = stringToHTML("<input placeholder='#' type='text'>");
 
         if(this.roundingMode == "sci"){
             input.setAttribute("placeholder", "# sci")
