@@ -1,15 +1,15 @@
 [
     {
+        "key": "physics20",
+        "name": "Physics 20"
+    },
+    {
         "key": "math20", 
         "name": "Math 20"
     },
     {
         "key": "chem20", 
         "name": "Chemistry 20"
-    },
-    {
-        "key": "physics20",
-        "name": "Physics 20"
     },
     {
         "key": "experiments", 
